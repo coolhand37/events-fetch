@@ -1,0 +1,340 @@
+/*********************************************
+	Inherited Styles
+**********************************************/
+
+html {
+    box-sizing: border-box;
+    color: #444;
+    font-size: 12pt;
+    font-family: 'Open Sans', sans-serif, Arial;
+    font-weight: 300;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    color: inherit;
+    font: inherit;
+}
+
+
+/*********************************************
+	Defaults
+**********************************************/
+
+h1 {
+	margin: 0;
+}
+
+h2 {
+    font-size: 1.4em;
+}
+
+h3 {
+	font-weight: bold;
+}
+
+main > * + * {
+    padding: 20px 0;
+}
+
+img {
+    border: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+/*********************************************
+	Helpers
+**********************************************/
+
+/*********************************************
+    Layout
+**********************************************/
+body {
+    background-color: grey;
+}
+.panel {
+    background-color: white;
+}
+
+.panel > div {
+    /*background-color: purple;*/
+    text-align: center;
+    position: relative;
+}
+
+@media (max-width: 930px) {
+    .panel > div {
+    width: 930px;
+    }
+}
+
+header.main-header {
+    /*background-color: yellow;*/
+    overflow: hidden;
+    position: absolute;
+    z-index: 2;
+    height: 55px;
+    top: 10px;
+    right: 0;
+    left: 0;
+}
+
+/*header.main-header > div {
+    height: 55px;
+    position: relative;
+
+}*/
+
+.main-header nav {
+    /*background-color: black;*/
+    position: absolute;
+    right: 50px;
+}
+
+.main-header nav a {
+    /*background-color: red;*/
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.logo {
+    /*background-color: green;*/
+    height: 55px;
+    width: 150px;
+    display: inline-block;
+    position: absolute;
+    left: 50px;
+}
+
+div.main-hero {
+    background-image: url("images/festival2-1.jpg");
+    background-size: cover;
+    height: 400px;
+    position: relative;
+    z-index: 1;
+}
+
+div.main-hero.user-home {
+    background-image: url("images/gathering.jpeg");
+}
+
+div.main-content {
+    /*background-color: orange;*/
+}
+
+div.secondary-content {
+    /*background-color: green;*/
+    padding-top: 0;
+}
+
+footer.main-footer {
+    background-image: url("images/tweed.png");
+    font-size: 0.7em;
+    text-align: right;
+
+}
+
+
+/*********************************************
+    Components
+**********************************************/
+
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo-color {
+    background-color: #323232;
+    color: #F79639;
+    padding: 2px;
+    border: 3px solid white;
+}
+
+.main-hero-content {
+    /*background-color: green;*/
+    color: white;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px; /*why do i have to add width*/
+}
+
+.main-hero.user-home > div {
+}
+
+.signup-form {
+    /*background-color: green;*/
+    color: white;
+    border: 3px solid #F79639;
+    display: inline-block;
+    border-radius: 15px;
+    padding: 20px 15px;
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.signup-form form {
+    border-top: 2px solid #F79639;
+    padding-top: 10px;
+
+}
+
+.signup-form h1 {
+    font-size: 1.7em;
+}
+
+.field {
+    text-align: left;
+    /*background-color: green;*/
+    border: 1px solid transparent;
+    margin-top: 7px;
+}
+
+
+.cf::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.field .label {
+    /*background-color: blue;*/
+    float: left;
+    width: 85px;
+    display: block;
+    margin-top: 7px;
+}
+
+.field .short-label-zip {
+    width: 85px;
+    margin-bottom: 7px;
+}
+
+.field .short-label {
+    width: 50px;
+    margin-bottom: 7px;
+}
+
+.field .input {
+    /*background-color: yellow;*/
+    margin-left: 90px;
+    color: black;
+}
+
+.field .short-input-zip {
+    margin-left: 90px;
+}
+
+.field .short-input {
+    margin-left: 55px;
+}
+
+.signup-submit {
+    padding-top: 10px;
+}
+
+.signup-short {
+    float: left;
+    /*width: 49%;*/
+
+}
+
+.signup-age {
+    margin-left: 10px;
+}
+
+.signup-button {
+    padding: 5px;
+    border-radius: 20px;
+    width: 100px;
+    /*border: 2px solid white;*/
+    background-color: #F79639;
+}
+
+.main-hero-content button.signup-button {
+    padding: 10px;
+    width: 200px;
+    border-radius: 30px;
+    /*border: 2px solid white;*/
+    background-color: #F79639;
+
+}
+
+.signup-steps {
+    /*background-color: yellow;*/
+}
+
+.signup-steps .step {
+    /*background-color: yellow;*/
+    padding: 0 15px;
+    width: 30%;
+    display: inline-block;
+    vertical-align: top; 
+}
+
+.step-icon-border {
+    /*font-size: 2.5em;*/
+    color: #323232;
+    display: inline-block;
+    /*background-color: orange;*/
+    border: 3px solid #F79639;
+    padding: 5px 15px;
+    border-radius: 50%;
+}
+
+.secondary-content-divider {
+    /*background-color: #323232;*/
+    background-image: url("images/tweed.png");
+}
+
+.secondary-headline {
+    color: white;
+    padding: 20px;
+}
+
+.secondary-why {
+    padding: 10px 20px;
+}
+
+footer.main-footer > div {
+    /*background-color: white;*/
+    padding: 10px 20px;
+    display: inline-block;
+    width: 24%;
+    vertical-align: top;
+    text-align: left;
+    color: white;
+    /*height: 100px;*/
+}
+
+footer.main-footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer.main-footer i {
+    padding-right: 10px;
+}
+
+.site-links a {
+    padding: 5px;
+}
+
+p.social-media i {
+    font-size: 1.5em;
+}
+
+.hidden {
+    display: none;
+}

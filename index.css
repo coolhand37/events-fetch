@@ -20,17 +20,17 @@ html {
 /*********************************************
 	Defaults
 **********************************************/
+h1, h2, h3 {
+    font-weight: bold;
+    
+}
 
 h1 {
-	margin: 0;
+    margin: 0;
 }
 
 h2 {
     font-size: 1.4em;
-}
-
-h3 {
-	font-weight: bold;
 }
 
 main > * + * {
@@ -44,6 +44,15 @@ img {
 button {
     background-color: transparent;
     border: none;
+    font-weight: bold;
+}
+
+input {
+    color: black;
+}
+
+label {
+    font-weight: bold;
 }
 
 /*********************************************
@@ -117,15 +126,30 @@ div.main-hero {
     background-size: cover;
     height: 400px;
     position: relative;
-    z-index: 1;
+}
+
+div.main-hero.thankyou-page {
+    background-image: url("images/gathering.jpeg");
 }
 
 div.main-hero.user-home {
-    background-image: url("images/gathering.jpeg");
+    background-image: url("images/livelycity1.jpg");
+    height: 250px;
+    background-position: center;
+}
+
+div.main-hero.search-results {
+    background-image: url("images/events.jpg");
+    height: 250px;
+    background-position: center;
 }
 
 div.main-content {
     /*background-color: orange;*/
+}
+
+main div.user-search {
+    padding: 0;
 }
 
 div.secondary-content {
@@ -145,17 +169,25 @@ footer.main-footer {
     Components
 **********************************************/
 
+
+/*******Header********/
 .logo a {
     color: white;
     text-decoration: none;
 }
 
-.logo-color {
+.logo-design {
     background-color: #323232;
-    color: #F79639;
     padding: 2px;
     border: 3px solid white;
+    
 }
+
+.logo-color {
+    color: #F79639;
+}
+
+/********Hero Main Content*********/
 
 .main-hero-content {
     /*background-color: green;*/
@@ -170,7 +202,7 @@ footer.main-footer {
 .main-hero.user-home > div {
 }
 
-.signup-form {
+.user-form {
     /*background-color: green;*/
     color: white;
     border: 3px solid #F79639;
@@ -183,13 +215,13 @@ footer.main-footer {
     transform: translate(-50%, -50%);
 }
 
-.signup-form form {
+.user-form form {
     border-top: 2px solid #F79639;
     padding-top: 10px;
 
 }
 
-.signup-form h1 {
+.user-form h1 {
     font-size: 1.7em;
 }
 
@@ -215,48 +247,20 @@ footer.main-footer {
     margin-top: 7px;
 }
 
-.field .short-label-zip {
-    width: 85px;
-    margin-bottom: 7px;
-}
-
-.field .short-label {
-    width: 50px;
-    margin-bottom: 7px;
-}
-
 .field .input {
     /*background-color: yellow;*/
     margin-left: 90px;
-    color: black;
 }
 
-.field .short-input-zip {
-    margin-left: 90px;
-}
-
-.field .short-input {
-    margin-left: 55px;
-}
-
-.signup-submit {
+.form-submit {
     padding-top: 10px;
 }
 
-.signup-short {
-    float: left;
-    /*width: 49%;*/
-
-}
-
-.signup-age {
-    margin-left: 10px;
-}
-
-.signup-button {
+.submit-button {
     padding: 5px;
     border-radius: 20px;
     width: 100px;
+    color: white;
     /*border: 2px solid white;*/
     background-color: #F79639;
 }
@@ -268,6 +272,62 @@ footer.main-footer {
     /*border: 2px solid white;*/
     background-color: #F79639;
 
+}
+
+/********Main Content**********/
+
+.user-tools .tool {
+    vertical-align: top;
+    width: 350px;
+    /*min-height: 100px;*/
+    color: white;
+    display: inline-block; 
+    transform: translateY(-30px);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 0;
+}
+
+.user-edit .tool {
+    vertical-align: top;
+    width: 350px;
+    /*min-height: 100px;*/
+    color: white;
+    display: inline-block; 
+    transform: translateY(-30px);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 0;
+}
+
+.tool .tool-tab {
+ /*   display: inline-block;*/
+    /*color: #F79639;*/
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    /*background-image: url("images/tweed.png");*/
+    background-color: #4f4e4e;
+    box-shadow: 0px 0px 10px -5px black;
+    padding: 20px 0;
+    margin: 0;
+
+}
+
+.tool > div {
+    color: #4f4e4e;
+    padding: 10px;
+    box-shadow: 0px 0px 10px -5px black;
+    /*border: 1px solid black;*/
+    border-top: none;
+    min-height: 175px;
+}
+
+.field .tool-label {
+    width: 100px;
+}
+
+.field .tool-input {
+    margin-left: 105px;
 }
 
 .signup-steps {
@@ -292,14 +352,57 @@ footer.main-footer {
     border-radius: 50%;
 }
 
+.main-content .map {
+    margin: 0 auto;
+    background-color: grey;
+    width: 700px;
+    height: 400px;
+    transform: translateY(-35px);
+}
+
+
+/*******Secondary Content********/
+
 .secondary-content-divider {
-    /*background-color: #323232;*/
-    background-image: url("images/tweed.png");
+    background-color: #4f4e4e;
+    /*background-image: url("images/tweed.png");*/
 }
 
 .secondary-headline {
     color: white;
     padding: 20px;
+}
+
+.user-results-divider {
+    background-color: black;
+}
+
+.user-results-headline {
+    color: green;
+
+}
+
+.media-event-bio {
+    background-color: rgb(232, 243, 249);
+    overflow: hidden;
+    margin: 10px;
+}
+
+.media-bio-pic {
+    background-color: yellow;
+    float: left;
+    width: 200px;
+    height: 200px;
+}
+
+.media-bio-content {
+    background-color: white;
+    margin-left: 210px;
+    text-align: left;
+}
+
+.tag-icon {
+    padding-left: 5px;
 }
 
 .secondary-why {

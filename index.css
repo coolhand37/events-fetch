@@ -213,6 +213,7 @@ footer.main-footer {
     top: 57%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 500px;
 }
 
 .user-form form {
@@ -223,6 +224,15 @@ footer.main-footer {
 
 .user-form h1 {
     font-size: 1.7em;
+}
+
+.user-form-column1 {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.user-form-column2 {
+    display: inline-block;
 }
 
 .field {

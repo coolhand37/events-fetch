@@ -1,1 +1,70 @@
-{}
+{
+  "users": [
+    {
+      "uname": "coolhand37",
+      "password": 12345,
+      "email": "coolhand@hotmail.com",
+      "gender": "male",
+      "age": 34,
+      "zip": 85286,
+      "id": 1
+    },
+    {
+      "uname": "jim",
+      "password": "kljlk",
+      "email": "jbeam@hotmail.com",
+      "gender": "male",
+      "age": 34,
+      "zip": 32423,
+      "id": 2
+    },
+    {
+      "uname": "",
+      "password": "",
+      "email": "",
+      "gender": "male",
+      "age": "",
+      "zip": "",
+      "id": 3
+    },
+    {
+      "uname": "",
+      "password": "",
+      "email": "",
+      "gender": "male",
+      "age": "",
+      "zip": "",
+      "id": 4
+    },
+    {
+      "uname": "johny walker",
+      "password": "not#8",
+      "email": "jwalk@gmail.com",
+      "gender": "male",
+      "age": 23,
+      "zip": 53432,
+      "id": 5
+    },
+    {
+      "uname": "malibu",
+      "password": "kljlk",
+      "email": "malibu@hotmail.com",
+      "gender": "male",
+      "age": 21,
+      "zip": 23232,
+      "id": 6
+    }
+  ],
+  "events": [
+    {
+      "name": "Tempe Town Lake Oktoberfest",
+      "address": "80 W Rio Salado Pkwy",
+      "city": "tempe",
+      "state": "az",
+      "zip": 85281,
+      "id": 1,
+      "bio": "Get really really drunk this weekend in our attempt recreate the greatest event of all time: Oktoberfeest.",
+      "img": "tempelake.jpg"
+    }
+  ]
+}

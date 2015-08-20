@@ -1,0 +1,163 @@
+<div class="main-hero user-home">
+	<div class="main-hero-content">
+	<h1>Welcome {{username}},</h1>
+	<p class="edit-link"><b>Edit Profile</b></p>
+	</div>
+</div>
+<div class="main-content user-search">
+	<div class="user-tools">
+		<div class="tool tag-event">
+			<h2 class="tool-tab">Tag Events</h2>
+			<div>
+				<form action="">
+					<div class="field">
+						<div class="label tool-label">
+							<label>Event Name:</label>
+						</div>
+						<div class="input tool-input">
+							<input type="search">
+						</div>
+					</div>
+					<div class="field">
+						<div class="label tool-label">
+							<label>Event Date:</label>
+						</div>
+						<div class="input tool-input">
+							<input type="date" >
+						</div>
+					</div>
+					<div class="field">
+						<div class="label tool-label">
+							<label>Zip code:</label>
+						</div>
+						<div class="input tool-input">
+							<input type="text" maxlength="5">
+						</div>
+					</div>
+					<div class="form-submit">
+						<button class="submit-button">Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="tool search-event">
+			<h2 class="tool-tab">Search Events</h2>
+			<div>
+				<form action="">
+					<div class="field">
+						<div class="label tool-label">
+							<label>Categories:</label>
+						</div>
+						<div class="input tool-input">
+							<input type="dropdown">
+						</div>
+					</div>
+					<div class="field">
+						<div class="label tool-label">
+							<label>Dates:</label>
+						</div>
+						<div class="input tool-input">
+							<input type="date" >
+						</div>
+					</div>
+					<div class="field">
+						<div class="label tool-label">
+							<label>Zip code:</label>
+						</div>
+						<div class="input tool-input">
+							<input type="text" maxlength="5">
+						</div>
+					</div>
+					<div class="form-submit">
+						<button class="submit-button search-events">Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="user-edit hidden">
+		<div class="tool">
+			<h2 class="tool-tab">Edit User Details</h2>
+			<div>
+				<form action="">
+					<div class="field">
+						<div class="label">
+							<label>Username:</label>
+						</div>
+						<div class="input">
+							<input type="text" name="uname" value="{{username}}">
+						</div>
+					</div>
+					<div class="field">
+						<div class="label">
+							<label>Password:</label>
+						</div>
+						<div class="input">
+							<input type="password" name="password" value="{{password}}">
+						</div>
+					</div>
+					<div class="field">
+						<div class="label">
+							<label>Email:</label>
+						</div>
+						<div class="input">
+							<input type="email" name="email" value="{{email}}">
+						</div>
+					</div>						
+					<div class="field">
+						<div class="label">
+							<label>Zip Code:</label>
+						</div>
+						<div class="input">
+							<input type="text" name="zip" value="{{zip}}" value=size="6" maxlength="5">
+						</div>
+					</div>
+					<div class="field">
+						<div class="label">
+							<label>Age:</label>
+						</div>
+						<div class="input">
+							<input type="text" name="age" value="{{age}}" size="6" maxlength="3">
+						</div>
+					</div>
+					<div class="field">
+						<div class="label">
+							<label>Gender:</label>
+						</div>
+						<div class="input">
+							<select name="gender" name="gender" value="{{gender}}">
+								<option value="male">Male</option>
+								<option value="female">Female</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-submit">
+						<button class="submit-button">Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="secondary-content">
+	<div class="user-results-divider">
+		<h1 class="user-results-headline">Results</h1>
+	</div>
+	<div class="media-event-bio">
+		<div class="media-bio-pic">
+			<img src="" alt="event picture">
+		</div>
+		<div class="media-bio-content">
+			<div>
+				<h3>Event Name</h3>
+			</div>
+			<div>
+				<p>short event bio: Lorem ipsum dolor sit amet, 
+				consectetur adipisicing elit. Ex debitis consequatur 
+				quam praesentium nisi repellat</p>
+				<p><a href="">www.website.com</a></p>
+				<i class="fa fa-plus logo-color"><a href=""></i><span class="tag-icon">Tag this event</span></a>
+			</div>
+		</div>
+	</div>
+</div>

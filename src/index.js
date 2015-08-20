@@ -1,14 +1,49 @@
 var Backbone = require('backbone');
 
 var App = require('./app');
+var userCollection = require('./collections/user')
+
+var HomeView = require('./views/home');
+App.Views.home  = new HomeView;
+
+var ThankYouView = require('./views/thank-you');
+App.Views.thankYou = new ThankYouView;
+
+var ProfileView = require('./views/profile');
+App.Views.profile = new ProfileView;
+
+var EventsListView = require('./views/events-list');
+App.Views.eventsList = new EventsListView;
 
 App.Router = Backbone.Router.extend({
 
 	routes: {
 		'': 'index',
-		'thankyou(/)': 'thankyou',
-		'welcome/:id': 'welcome',
-		'events': 'eventslist'
-	}
+		'thankyou/:id(/)': 'thankYou',
+		'profile/:id(/)': 'profile',
+		'events(/)': 'eventsList',
+		'*actions': 'defaultRoute'
+	},
 
-})
+	index: function() {
+		App.Views.home.render()
+	},
+
+	thankYou: function(id) {
+		App.Views.thankYou.render(id)
+	},
+
+	profile: function(id) {
+		App.Views.profile.render(id)
+	},
+
+	eventsList: function() {
+		App.Views.eventsList.render()
+
+	} 
+
+});
+
+App.router = new App.Router;
+
+Backbone.history.start();

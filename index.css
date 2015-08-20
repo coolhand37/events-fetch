@@ -55,6 +55,10 @@ label {
     font-weight: bold;
 }
 
+select {
+    color: black;
+}
+
 /*********************************************
 	Helpers
 **********************************************/
@@ -62,11 +66,11 @@ label {
 /*********************************************
     Layout
 **********************************************/
-body {
-    background-color: grey;
-}
 .panel {
     background-color: white;
+}
+.panel.login {
+    opacity: .4;
 }
 
 .panel > div {
@@ -275,7 +279,11 @@ footer.main-footer {
     background-color: #F79639;
 }
 
-.main-hero-content button.signup-button {
+.submit-button.registration {
+    width: 150px;
+}
+
+.main-hero-content button.signup-button, button.get-started {
     padding: 10px;
     width: 200px;
     border-radius: 30px;
@@ -286,11 +294,17 @@ footer.main-footer {
 
 /********Main Content**********/
 
+.edit-link {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .user-tools .tool {
     vertical-align: top;
     width: 350px;
     /*min-height: 100px;*/
     color: white;
+    margin-right: 10px;
     display: inline-block; 
     transform: translateY(-30px);
     border-top-left-radius: 10px;
@@ -384,11 +398,11 @@ footer.main-footer {
 }
 
 .user-results-divider {
-    background-color: black;
+    background-color: #323232;
 }
 
 .user-results-headline {
-    color: green;
+    color: #4ce549;
 
 }
 

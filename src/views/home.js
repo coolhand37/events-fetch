@@ -29,7 +29,7 @@ var Home = Backbone.View.extend({
     		password: $('form.registration input[name="password"]').val(),
     		email: $('form.registration input[name="email"]').val(),
     		gender: $('form.registration select[name="gender"]').val(),
-    		age: $('form.registration input[name="age"]').val(),
+    		birthyear: $('form.registration input[name="birthyear"]').val(),
     		zip: $('form.registration input[name="zipCode"]').val() 
     	};
 

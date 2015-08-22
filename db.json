@@ -5,7 +5,7 @@
       "password": 12345,
       "email": "coolhand@hotmail.com",
       "gender": "male",
-      "age": 34,
+      "birthyear": 1981,
       "zip": 85286,
       "id": 1
     },
@@ -14,16 +14,16 @@
       "password": "kljlk",
       "email": "jbeam@hotmail.com",
       "gender": "male",
-      "age": 34,
+      "birthyear": 1991,
       "zip": 32423,
       "id": 2
     },
     {
-      "uname": "",
-      "password": "",
-      "email": "",
-      "gender": "male",
-      "age": "",
+      "uname": "mojito23",
+      "password": "ilkhl",
+      "email": "mojito@aol.com",
+      "gender": "female",
+      "birthyear": 1987,
       "zip": "",
       "id": 3
     },
@@ -32,7 +32,7 @@
       "password": "",
       "email": "",
       "gender": "male",
-      "age": "",
+      "birthyear": 1993,
       "zip": "",
       "id": 4
     },
@@ -41,7 +41,7 @@
       "password": "not#8",
       "email": "jwalk@gmail.com",
       "gender": "male",
-      "age": 23,
+      "birthyear": 1986,
       "zip": 53432,
       "id": 5
     },
@@ -50,9 +50,36 @@
       "password": "kljlk",
       "email": "malibu@hotmail.com",
       "gender": "male",
-      "age": 21,
+      "birthyear": 1994,
       "zip": 23232,
       "id": 6
+    },
+    {
+      "uname": "john",
+      "password": "kljlkj",
+      "email": "jonjim@gmail.com",
+      "gender": "male",
+      "birthyear": 1972,
+      "zip": 69873,
+      "id": 7
+    },
+    {
+      "uname": "",
+      "password": "",
+      "email": "",
+      "gender": "male",
+      "birthyear": "",
+      "zip": "",
+      "id": 8
+    },
+    {
+      "uname": "jessi",
+      "password": "peaase",
+      "email": "jessi@gmail.com",
+      "gender": "female",
+      "birthyear": 1983,
+      "zip": 85286,
+      "id": 9
     }
   ],
   "events": [
@@ -64,7 +91,101 @@
       "zip": 85281,
       "id": 1,
       "bio": "Get really really drunk this weekend in our attempt recreate the greatest event of all time: Oktoberfeest.",
-      "img": "tempelake.jpg"
+      "img": "no_image.jpg",
+      "date": "09/05/2015",
+      "category": "day drinking",
+      "url": "http://www.tempelakeoktoberfest.com"
+    },
+    {
+      "name": "Scottsdale beerfest",
+      "address": "2311 N Miller Rd",
+      "city": "scottsdale",
+      "state": "az",
+      "zip": 85257,
+      "id": 2,
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident mollitia sed repellendus soluta debitis expedita.",
+      "img": "no_image.jpg",
+      "date": "09/05/2015",
+      "category": "day drinking",
+      "url": "http://www.scottsdalebeerfest.com"
+    },
+    {
+      "name": "Beer games",
+      "address": "8 S San Marcos Pl",
+      "city": "chandler",
+      "state": "az",
+      "zip": 85225,
+      "id": 3,
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident mollitia sed repellendus soluta debitis expedita.",
+      "img": "no_image.jpg",
+      "date": "09/05/2015",
+      "category": "day drinking",
+      "url": "http://www.bestdayever.com"
+    },
+    {
+      "name": "Spice girl reunion",
+      "address": "730 N Mill Ave",
+      "city": "tempe",
+      "state": "az",
+      "zip": 85281,
+      "id": 4,
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident mollitia sed repellendus soluta debitis expedita.",
+      "img": "no_image.jpg",
+      "date": "09/05/2015",
+      "category": "music",
+      "url": "http://www.dontshootyourself.com"
+    },
+    {
+      "name": "non-alcoholic beverage guild unite",
+      "address": "1833 W Southern Ave",
+      "city": "mesa",
+      "state": "az",
+      "zip": 85202,
+      "id": 5,
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident mollitia sed repellendus soluta debitis expedita.",
+      "img": "no_image.jpg",
+      "date": "09/05/2015",
+      "category": "day drinking",
+      "url": "http://www.nofunever.com"
+    },
+    {
+      "name": "The Who",
+      "address": "440 N 32nd St",
+      "city": "phoenix",
+      "state": "az",
+      "zip": 85008,
+      "id": 6,
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident mollitia sed repellendus soluta debitis expedita.",
+      "img": "no_image.jpg",
+      "date": "09/05/2015",
+      "category": "music",
+      "url": "http://www.whowhowhowho.com"
+    },
+    {
+      "name": "The ultimate culinary and wine festival",
+      "address": "7107 E McDowell Rd",
+      "city": "scottsdale",
+      "state": "az",
+      "zip": 85257,
+      "id": 7,
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident mollitia sed repellendus soluta debitis expedita.",
+      "img": "no_image.jpg",
+      "date": "09/05/2015",
+      "category": "day drinking",
+      "url": "http://www.culinaryandwine.com"
+    },
+    {
+      "name": "Dwight Yokem",
+      "address": "1065 N Dobson Rd",
+      "city": "mesa",
+      "state": "az",
+      "zip": 85201,
+      "id": 8,
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident mollitia sed repellendus soluta debitis expedita.",
+      "img": "no_image.jpg",
+      "date": "09/05/2015",
+      "category": "music",
+      "url": "http://www.getyokemed.com"
     }
   ]
 }

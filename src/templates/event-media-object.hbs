@@ -1,0 +1,19 @@
+{{#each this}}
+<div class="media-event-bio">
+	<div class="media-bio-pic">
+		<img src="{{img}}" alt="event picture">
+	</div>
+	<div class="media-bio-content">
+		<div>
+			<h3>{{name}}</h3>
+		</div>
+		<div>
+			<p>{{bio}}</p>			
+			<p>Address: {{address}}, {{city}}, {{state}} {{zip}}<a href="{{url}}">{{url}}</a></p>
+			<i class="fa fa-plus logo-color"><a href=""></i><span class="tag-icon">Tag this event</span></a>
+		</div>
+	</div>
+</div>
+{{/each}}
+
+

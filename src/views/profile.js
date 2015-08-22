@@ -1,6 +1,7 @@
 var $ = require('jquery');
 var Backbone = require('backbone');
 var profileTemplate = require('../templates/profile.hbs');
+var eventMediaTemplate = require('../templates/event-media-object.hbs')
 var lodash = require('lodash')
 var App = require('../app');
 
@@ -9,9 +10,10 @@ var Profile = Backbone.View.extend({
 	el: $('main'),
 
 	events: {
-	'click .search-events':  'clickSearch',
+	// 'click .search-events':  'clickSearch',
 	'click .edit-link': 'clickEdit',
-	'submit .user-edit form': 'submitEditUser'
+	'submit .user-edit form': 'submitEditUser',
+	'submit .tag-event form': 'submitTagEvent'
 	},
 
 	render: function(userId) {
@@ -35,9 +37,9 @@ var Profile = Backbone.View.extend({
 
 	},
 
-	clickSearch: function() {
-		App.router.navigate('events', true);
-	},
+	// clickSearch: function() {
+	// 	App.router.navigate('events', true);
+	// },
 
 	clickEdit: function() {
 		$('.user-tools').addClass('hidden');
@@ -52,7 +54,7 @@ var Profile = Backbone.View.extend({
     		password: $('.user-edit form input[name="password"]').val(),
     		email: $('.user-edit form input[name="email"]').val(),
     		gender: $('.user-edit form select[name="gender"]').val(),
-    		age: $('.user-edit form input[name="age"]').val(),
+    		birthyear: $('.user-edit form input[name="birthyear"]').val(),
     		zip: $('.user-edit form input[name="zipCode"]').val() 
     	};
 
@@ -64,6 +66,26 @@ var Profile = Backbone.View.extend({
         	$('.user-edit').addClass('hidden');
         	$('.user-tools').removeClass('hidden');
       	});
+
+	},
+
+	submitTagEvent: function(e){
+		e.preventDefault()
+
+		App.Collections.event.fetch().done(function(events){
+			var category = $('.tag-event form input[name="name"]').val()
+			var eventsByCategory = events.filter(function (model) {
+			  console.log(model.category)
+	          return model.category === category
+	        })
+	        // .map(function (model) {
+				var result = eventMediaTemplate(eventsByCategory);
+				$('.media-event-bio-list').html(result);
+	        //   return model.toJSON()
+	        // })
+	        
+	      });
+
 
 	}
  

@@ -3,6 +3,8 @@ var Backbone = require('backbone');
 var App = require('./app');
 var userCollection = require('./collections/user')
 
+var eventCollection = require('./collections/event')
+
 var HomeView = require('./views/home');
 App.Views.home  = new HomeView;
 

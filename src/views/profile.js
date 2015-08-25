@@ -4,25 +4,29 @@ var profileTemplate = require('../templates/profile.hbs');
 var eventMediaTemplate = require('../templates/event-media-object.hbs')
 var lodash = require('lodash')
 var App = require('../app');
+var tagCollection = require('../collections/tag');
 
 var Profile = Backbone.View.extend({
 
 	el: $('main'),
 
 	events: {
-	// 'click .search-events':  'clickSearch',
-	'click .edit-link': 'clickEdit',
+	'click .edit-profile': 'clickEdit',
+	'click .search-events':  'clickSearch',
+	'click .tag-events': 'clickTag',
 	'submit .user-edit form': 'submitEditUser',
-	'submit .tag-event form': 'submitTagEvent'
+	'submit .user-tag form': 'submitTagEvent',
+	'click .tag-it': 'clickToTagIt',
+	'click .untag-it': 'clickToUnTagIt'
 	},
 
 	render: function(userId) {
 		var _this = this;
 
-		console.log(userId)
+		
 		var user = this.user = new App.Models.User({
 			id: userId
-		})
+		});
 
 		user.fetch().done(function(){
 			_this.$el.html(profileTemplate({
@@ -31,19 +35,59 @@ var Profile = Backbone.View.extend({
 				email: user.get('email'),
 				gender: user.get('gender'),
 				zip: user.get('zip'),
-				age: user.get('age')
+				birthyear: user.get('birthyear')
 			}));
-		})
+		});
+
+		var today = new Date();
+		var dd = today.getDate();
+		var mm = today.getMonth()+1; //January is 0!
+		var yyyy = today.getFullYear();
+
+		if(dd<10) dd='0'+dd;
+
+		if(mm<10) mm='0'+mm;
+
+		today = mm+'/'+dd+'/'+yyyy;
+		console.log(today);
+
+		App.Collections.event.fetch().done(function(){
+			
+			tagCollection.fetch().done(function(){
+
+				var userId = _this.user.id;
+				var todaysEvents = App.Collections.event.filter(function (model) {
+				  	
+					var tag = tagCollection.findWhere({
+						eventId: model.id,
+						userId: userId
+					});
+					model.set('isTagged', !!tag)
+		          	return model.get('date') === today;
+		        })
+		        .map(function(model){
+		        	return model.toJSON();
+		        })
+		        console.log(todaysEvents)
+				var result = eventMediaTemplate(todaysEvents);
+				$('.media-event-bio-list').html(result);
+			})
+	        
+	      });
+
 
 	},
 
-	// clickSearch: function() {
-	// 	App.router.navigate('events', true);
-	// },
-
 	clickEdit: function() {
-		$('.user-tools').addClass('hidden');
-		$('.user-edit').removeClass('hidden');
+		$('.user-form.user-edit').removeClass('hidden');
+	},
+
+	clickSearch: function() {
+		App.router.navigate('events', true);
+	},
+
+	clickTag: function() {
+		$('.user-form.user-tag').removeClass('hidden');
 	},
 
 	submitEditUser: function(e) {
@@ -61,7 +105,7 @@ var Profile = Backbone.View.extend({
 
 		this.user.set(formData);
 
-		console.log(this.user)
+		console.log(this.user);
      	this.user.save().done(function () {
         	$('.user-edit').addClass('hidden');
         	$('.user-tools').removeClass('hidden');
@@ -70,23 +114,60 @@ var Profile = Backbone.View.extend({
 	},
 
 	submitTagEvent: function(e){
-		e.preventDefault()
+		e.preventDefault();
 
-		App.Collections.event.fetch().done(function(events){
-			var category = $('.tag-event form input[name="name"]').val()
-			var eventsByCategory = events.filter(function (model) {
-			  console.log(model.category)
-	          return model.category === category
-	        })
-	        // .map(function (model) {
-				var result = eventMediaTemplate(eventsByCategory);
-				$('.media-event-bio-list').html(result);
-	        //   return model.toJSON()
-	        // })
-	        
-	      });
+		var events = App.Collections.event
 
+		var searchTerm = $('.user-tag form input[name="name"]').val();
+		var searchName = events.filter(function (model) {
+		  var match = false;
+		  match = (new RegExp('.*' + searchTerm + '.*', 'i'))
+		  	.test(model.get('name'));
+		  console.log(model.get('name'))
+          return match
+        })
+        .map(function(model) {
+        	return model.toJSON()
+        })
 
+		var result = eventMediaTemplate(searchName);
+		$('.media-event-bio-list').html(result);
+		$('.user-tag').addClass('hidden');
+        $('.todays-top-events').addClass('hidden');
+        $('.user-results-headline').removeClass('hidden')
+	  
+	},
+
+	clickToTagIt: function(e){
+		var userId = this.user.id;
+		var eventId = $(e.target).parents('div.media-event-bio').data('event-id');
+		console.log(eventId)
+		console.log(userId)
+		var tag = new App.Models.Tag({
+			userId: userId,
+			eventId: eventId
+		});
+
+		tag.save().done(function(){
+			$(e.currentTarget).addClass('hidden');
+			$(e.currentTarget).siblings('.untag-it').removeClass('hidden')
+		});
+		
+		tagCollection.add(tag)
+	},
+
+	clickToUnTagIt: function(e){
+		var userId = this.user.id;
+		var eventId = $(e.target).parents('div.media-event-bio').data('event-id');
+		var tag = tagCollection.findWhere({
+			eventId: eventId,
+			userId: userId
+		});
+		
+	    tag.destroy().done(function (tag) {
+			$(e.currentTarget).addClass('hidden')
+	      	$(e.currentTarget).siblings('.tag-it').removeClass('hidden');
+	    });
 	}
  
 });

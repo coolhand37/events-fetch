@@ -22,11 +22,10 @@ html {
 **********************************************/
 h1, h2, h3 {
     font-weight: bold;
-    
 }
 
-h1 {
-    margin: 0;
+h1, h2 {
+    margin: 0;   
 }
 
 h2 {
@@ -117,12 +116,10 @@ header.main-header {
 }
 
 .logo {
-    /*background-color: green;*/
-    height: 55px;
-    width: 150px;
     display: inline-block;
     position: absolute;
     left: 50px;
+    top: 10px;
 }
 
 div.main-hero {
@@ -133,18 +130,19 @@ div.main-hero {
 }
 
 div.main-hero.thankyou-page {
+    height: 500px;
     background-image: url("images/gathering.jpeg");
 }
 
 div.main-hero.user-home {
     background-image: url("images/livelycity1.jpg");
-    height: 250px;
+    height: 200px;
     background-position: center;
 }
 
 div.main-hero.search-results {
-    background-image: url("images/events.jpg");
-    height: 250px;
+    background-image: url("images/events1.jpg");
+    height: 200px;
     background-position: center;
 }
 
@@ -152,8 +150,9 @@ div.main-content {
     /*background-color: orange;*/
 }
 
-main div.user-search {
+main div.user-account-main {
     padding: 0;
+    position: relative;
 }
 
 div.secondary-content {
@@ -203,7 +202,27 @@ footer.main-footer {
     width: 600px; /*why do i have to add width*/
 }
 
-.main-hero.user-home > div {
+.thankyou-page .main-hero-content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.search-results .main-hero-content {
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+
+.main-hero.user-home h1 {
+    font-size: 2.5em;
+}
+
+.main-hero.search-results h1 {
+    font-size: 2.5em;
 }
 
 .user-form {
@@ -283,6 +302,7 @@ footer.main-footer {
     width: 150px;
 }
 
+
 .main-hero-content button.signup-button, button.get-started {
     padding: 10px;
     width: 200px;
@@ -318,34 +338,38 @@ footer.main-footer {
 }
 
 .profile-options > div {
-    background-color: blue;
+    vertical-align: top;
     width: 32%;
     height: 200px;
     display: inline-block;
     padding: 20px;
+    cursor: pointer;
 }
 
-.profile-options h2 {
-    padding-top: 0;
+/*.profile-options > div p {
+    padding: 0 10px;
+}*/
+
+.profile-options h1 {
+    font-size: 1.7em;
 }
 
 .line {
     background-color: orange;
-    height: 3px;
-    width: 20px;
-    border-radius: 1px;
+    height: 7px;
+    width: 40px;
+    border-radius: 5px;
     display: inline-block;
+    transition: all .5s
 }
 
-.edit-link {
-    text-decoration: underline;
-    cursor: pointer;
+.hover-options:hover .line {
+    width: 80px;
 }
 
-.user-tools .tool {
+/*.user-tools .tool {
     vertical-align: top;
     width: 350px;
-    /*min-height: 100px;*/
     color: white;
     margin-right: 10px;
     display: inline-block; 
@@ -353,41 +377,15 @@ footer.main-footer {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     margin-bottom: 0;
-}
-
-/*.user-edit .tool {
-    vertical-align: top;
-    width: 350px;
-    /*min-height: 100px;*/
-    /*color: white;
-    display: inline-block; 
-    transform: translateY(-30px);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    margin-bottom: 0;
 }*/
 
-.tool .tool-tab {
- /*   display: inline-block;*/
-    /*color: #F79639;*/
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    /*background-image: url("images/tweed.png");*/
-    background-color: #4f4e4e;
-    box-shadow: 0px 0px 10px -5px black;
-    padding: 20px 0;
-    margin: 0;
-
-}
-
-.tool > div {
+/*.tool > div {
     color: #4f4e4e;
     padding: 10px;
     box-shadow: 0px 0px 10px -5px black;
-    /*border: 1px solid black;*/
     border-top: none;
     min-height: 175px;
-}
+}*/
 
 .field .tool-label {
     width: 100px;
@@ -397,6 +395,148 @@ footer.main-footer {
     margin-left: 105px;
 }
 
+.user-edit {
+    background-color: #f4f3f2;
+    color: #4f4e4e;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.user-tag {
+
+    background-color: #f4f3f2;
+    color: #4f4e4e;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 315px;
+    
+}
+
+.search-events-results {
+    background-color: red;
+    min-height: 500px;
+}
+
+.events-rail-container {
+    background-color: blue;
+    margin-left: 5px;
+    width: 250px;
+    float: left;
+
+}
+
+.events-rail-h2 {
+    border: 1px solid #ccc;
+    text-align: center;
+    
+}
+
+.events-rail-h3 {
+    border: 1px solid #ccc;
+    margin: 15px 0 0 10px;
+    
+}
+
+.rail-date, .filter-box {
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.filter-box {
+    background-color: yellow;
+}
+
+.filter-type h3 {
+    background-color: orange;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    padding: 10px 0px 10px 15px;
+    margin: 5px 0;
+    width: 210px;
+    display: inline-block;
+    /*width: 150px;*/
+}
+
+.filter-type i {
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 3px 4px 1px 3px;
+    font-size: .7em;
+    margin-left: 3px;
+}
+
+.filter-type {
+    background-color: white;
+}
+
+.events-rail {
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.filter-type-list {
+    margin-top: 10px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.filter-type-list li.filter-item {
+    padding: 3px 0 3px 10px;
+    position: relative;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+}
+
+.filter-item i {
+    position: absolute;
+    right: 5px;
+    top: 3px;
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 3px 4px 1px 3px;
+    font-size: .7em;
+}
+
+.load-more-events {
+    padding: 10px 0 0 10px;
+    margin: top 5px;
+}
+
+.load-more-events i {
+    padding-left: 5px;
+    position: relative;
+}
+
+.location-filter {
+    margin-top: 5px;
+}
+
+.load-more-locations {
+    padding: 10px 0 0 10px;
+    margin: top 5px;
+}
+
+.load-more-locations i {
+    padding-left: 5px;
+    position: relative;
+}
+
+.events-results {
+    background-color: green;
+    text-align: left;
+    margin-left: 260px;
+}
+
+.search-bar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+}
 
 .main-content .map {
     padding: 0;
@@ -422,8 +562,13 @@ footer.main-footer {
 }
 
 .user-results-headline {
-    color: #4ce549;
+    color: #F79639;
+    padding: 20px;
+}
 
+.todays-top-events {
+    color: #F79639;
+    padding: 20px;
 }
 
 .media-event-bio {
@@ -443,6 +588,18 @@ footer.main-footer {
     background-color: white;
     margin-left: 210px;
     text-align: left;
+}
+
+.tag-it, .untag-it {
+    cursor: pointer;
+}
+
+.tag-it i.fa-plus {
+    color: #00FF00;
+}
+
+.untag-it i.fa-minus {
+    color: #FF0000;
 }
 
 .tag-icon {

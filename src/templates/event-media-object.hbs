@@ -1,5 +1,5 @@
 {{#each this}}
-<div class="media-event-bio">
+<div class="media-event-bio" data-event-id={{id}}>
 	<div class="media-bio-pic">
 		<img src="{{img}}" alt="event picture">
 	</div>
@@ -9,8 +9,14 @@
 		</div>
 		<div>
 			<p>{{bio}}</p>			
-			<p>Address: {{address}}, {{city}}, {{state}} {{zip}}<a href="{{url}}">{{url}}</a></p>
-			<i class="fa fa-plus logo-color"><a href=""></i><span class="tag-icon">Tag this event</span></a>
+			<p>Address: {{address}}, {{city}}, {{state}} {{zip}}</p>
+			<a href="{{url}}">{{url}}</a>			
+			<p class="tag-it {{#if isTagged}}hidden{{/if}}">
+				<i class="fa fa-plus"></i><span class="tag-icon">Tag this event</span>
+			</p>
+			<p class="untag-it {{#if isTagged}}{{else}}hidden{{/if}}">
+				<i class="fa fa-minus"></i><span class="tag-icon">Untag this event</span>
+			</p>
 		</div>
 	</div>
 </div>

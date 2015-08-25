@@ -80,6 +80,42 @@
       "birthyear": 1983,
       "zip": 85286,
       "id": 9
+    },
+    {
+      "uname": "jerry",
+      "password": "brondocs",
+      "email": "jerry@gmail.com",
+      "gender": "male",
+      "birthyear": 1954,
+      "zip": 86004,
+      "id": 10
+    },
+    {
+      "uname": "coolhand37",
+      "password": 12345,
+      "email": "coolhand@hotmail.com",
+      "gender": "male",
+      "birthyear": 1981,
+      "zip": 85286,
+      "id": 11
+    },
+    {
+      "uname": "jt",
+      "password": "lkjlk",
+      "email": "jt@gmail.com",
+      "gender": "male",
+      "birthyear": 1981,
+      "zip": 65758,
+      "id": 12
+    },
+    {
+      "uname": "fast eddie",
+      "password": "kljlkjlkj",
+      "email": "fasteddie@gmail.com",
+      "gender": "male",
+      "birthyear": 1956,
+      "zip": 58768,
+      "id": 13
     }
   ],
   "events": [
@@ -182,10 +218,40 @@
       "zip": 85201,
       "id": 8,
       "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident mollitia sed repellendus soluta debitis expedita.",
-      "img": "no_image.jpg",
+      "img": "images/no_image.jpg",
       "date": "09/05/2015",
       "category": "music",
       "url": "http://www.getyokemed.com"
+    },
+    {
+      "name": "Final day of Bootcamp!",
+      "address": "1065 N Dobson Rd",
+      "city": "tempe",
+      "state": "az",
+      "zip": 85201,
+      "id": 9,
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident mollitia sed repellendus soluta debitis expedita.",
+      "img": "no_image.jpg",
+      "date": "08/24/2015",
+      "category": "festival",
+      "url": "http://www.yipeee.com"
+    }
+  ],
+  "tags": [
+    {
+      "userId": 12,
+      "eventId": 9,
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "eventId": 2,
+      "id": 3
+    },
+    {
+      "userId": 13,
+      "eventId": 2,
+      "id": 4
     }
   ]
 }

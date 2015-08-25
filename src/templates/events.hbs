@@ -1,53 +1,97 @@
 <div class="main-hero search-results">
-
+	<div class="main-hero-content">
+	</div>
 </div>
-<div class="main-content">
-	<div class="tool search-event">
+<div class="main-content search-events-results cf">
+	<aside class="events-rail-container">
+		<div class="events-rail">
+			<h2 class="events-rail-h2">Event Search</h2>
+			<h3 class="events-rail-h3">Date:</h3>
+			<div class="rail-date">
+				<input type="date" name="date" value="{{todaysDate}}">
+			</div>
+			<h3 class="events-rail-h3">Show me:</h3>
+			<div class="filter-box">
+				<div class="filter-type event-filter">
+					<h3>Event Types</h3>
+					<i class="fa fa-plus hidden"></i>
+					<i class="fa fa-minus"></i>
+				</div>
+				<ul class="filter-type-list events-list hidden">
+					<div>			
+						<li class="filter-item">Art<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item">Art<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item">Art<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+					</div>
+					<div class="load-more-events">More <i class="fa fa-caret-down"></i></div>
+					<div class="more-events hidden">
+						<li class="filter-item">Art<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item">Art<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item">Art<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+					</div>
+				</ul>
+				<div class="filter-type location-filter">
+					<h3>Event Types</h3>
+					<i class="fa fa-plus"></i>
+					<i class="fa fa-minus hidden"></i>
+				</div>
+				<ul class="filter-type-list location-list">
+					<div>			
+						<li class="filter-item">Art<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item">Art<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item">Art<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+					</div>
+					<div class="load-more-locations">More <i class="fa fa-caret-down"></i></div>
+					<div class="more-locations">
+						<li class="filter-item">Art<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item">Art<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item">Art<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+					</div>
+				</ul>
+			</div>
+		</div>
+	</aside>
+	<div class="events-results">
+		<h1>Events for {{date}}</h1>
+	</div>
+	{{!-- <div class="tool search-bar">
 		<form action="">
-					<label>Categories:</label>
-					<select name="categories">
-					  <option value="">All</option>
-					  <option value="art">Art</option>
-					  <option value="benifits">Benefits</option>
-					  <option value="bars">Bars</option>
-					  <option value="conferences">Conferences</option>
-					  <option value="cultural">Cultural</option>
-					  <option value="day drinking">Day Drinking</option>
-					  <option value="education">Education</option>
-					  <option value="family">Family</option>
-					  <option value="festivals">Festivals</option>
-					  <option value="food and drink">Food and Drink</option>
-					  <option value="happy hour">Happy Hour</option>
-					  <option value="health and fitness">Health and Fitness</option>
-					  <option value="music">Music</option>
-					  <option value="nightlife">Nightlife</option>
-					  <option value="outdoors">Outdoors</option>
-					  <option value="performing arts">Performing Arts</option>
-					  <option value="promotional events">Promotional Events</option>
-					  <option value="sports participatory">Sports - Participatory</option>
-					  <option value="sports spectator">Sports - Spectator</option>
-					  <option value="religious">Religious</option>
-					  <option value="theater">Theater</option>
-					</select>
+			<label>Categories:</label>
+			<select name="categories">
+			  <option value="">All</option>
+			  <option value="art">Art</option>
+			  <option value="benifits">Benefits</option>
+			  <option value="bars">Bars</option>
+			  <option value="conferences">Conferences</option>
+			  <option value="cultural">Cultural</option>
+			  <option value="day drinking">Day Drinking</option>
+			  <option value="education">Education</option>
+			  <option value="family">Family</option>
+			  <option value="festivals">Festivals</option>
+			  <option value="food and drink">Food and Drink</option>
+			  <option value="happy hour">Happy Hour</option>
+			  <option value="health and fitness">Health and Fitness</option>
+			  <option value="music">Music</option>
+			  <option value="nightlife">Nightlife</option>
+			  <option value="outdoors">Outdoors</option>
+			  <option value="performing arts">Performing Arts</option>
+			  <option value="promotional events">Promotional Events</option>
+			  <option value="sports participatory">Sports - Participatory</option>
+			  <option value="sports spectator">Sports - Spectator</option>
+			  <option value="religious">Religious</option>
+			  <option value="theater">Theater</option>
+			</select>
 
-					<label>Dates:</label>
-					<input type="date" >
+			<label>Dates:</label>
+			<input type="date" >
 
-					<label>Zip code:</label>
-					<input type="text" maxlength="5">
+			<label>Zip code:</label>
+			<input type="text" maxlength="5">
 
-				<button class="submit-button search-events">Submit</button>
+			<button class="submit-button search-events">Submit</button>
 		</form>
-	</div>
-	<div class="map">
+	</div> --}}
+	{{!-- <div class="map">
 		
-	</div>
-</div>
-<div class="secondary-content">
-	<div class="user-results-divider">
-		<h1 class="user-results-headline">Results</h1>
-	</div>
-	<div class="media-event-bio-list">
-		
-	</div>
+	</div> --}}
 </div>

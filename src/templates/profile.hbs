@@ -1,60 +1,133 @@
 <div class="main-hero user-home">
 	<div class="main-hero-content">
-	<h1>Welcome {{username}},</h1>
-	<p class="edit-link"><b>Edit Profile</b></p>
+		<h1>Welcome {{username}}</h1>
 	</div>
 </div>
-<div class="main-content user-search">
+<div class="main-content user-account-main">
 	<div class="profile-options">
-		<div>
+		<div class="hover-options edit-profile">
 			<div>
-			<h2>Edit Profile</h2>
+				<h1>Edit Profile</h1>
 			</div>
 			<div class="line"></div>
+			<p>Update your user profile and help us keep in contact by making
+			sure your email address is current. Thanks again for choosing Events Fecth!</p>
 		</div>
-		<div>
-			Edit
+		<div class="hover-options search-events">
+			<div>
+				<h1>Search Events</h1>
+			</div>
+			<div class="line"></div>
+			<p>Browse by category, date and location to find the most happening
+			events around town. Even find out how many people are attending,
+			average age and gender breakdown.</p>
 		</div>
-		<div>
-			Edit
+		<div class="hover-options tag-events">
+			<div>
+				<h1>Tag Events</h1>
+			</div>
+			<div class="line"></div>
+			<p>Already know the event you will be attending. Tag it to help others
+			find all the best events happening on any given day.</p>
 		</div>
 	</div>
-	{{!-- <div class="user-tools">
-		<div class="tool tag-event">
-			<h2 class="tool-tab">Tag Events</h2>
-			<div>
-				<form action="">
-					<div class="field">
-						<div class="label tool-label">
-							<label>Event Name:</label>
-						</div>
-						<div class="input tool-input">
-							<input type="search" name="name">
-						</div>
+	<div class="user-form user-edit hidden">
+		<h1>Edit Profile</h1><br>
+		<form action="" class="cf">
+			<div class="user-form-column1">
+				<div class="field">
+					<div class="label">
+						<label>Username:</label>
 					</div>
-					<div class="field">
-						<div class="label tool-label">
-							<label>Event Date:</label>
-						</div>
-						<div class="input tool-input">
-							<input type="date" >
-						</div>
+					<div class="input">
+						<input type="text" name="uname" value="{{username}}">
 					</div>
-					<div class="field">
-						<div class="label tool-label">
-							<label>Zip code:</label>
-						</div>
-						<div class="input tool-input">
-							<input type="text" maxlength="5">
-						</div>
+				</div>
+				<div class="field">
+					<div class="label">
+						<label>Password:</label>
 					</div>
-					<div class="form-submit">
-						<button class="submit-button">Submit</button>
+					<div class="input">
+						<input type="password" name="password" value="{{password}}">
 					</div>
-				</form>
+				</div>
+				<div class="field">
+					<div class="label">
+						<label>Email:</label>
+					</div>
+					<div class="input">
+						<input type="email" name="email" value="{{email}}">
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="tool search-event">
+			<div class="user-form-column2">						
+				<div class="field">
+					<div class="label">
+						<label>Gender:</label>
+					</div>
+					<div class="input">
+						<select name="gender" value="{{gender}}">
+							<option value="male">Male</option>
+							<option value="female">Female</option>
+						</select>
+					</div>
+				</div>
+				<div class="field">
+					<div class="label">
+						<label>Birth Year:</label>
+					</div>
+					<div class="input">
+						<input type="text" name="birthyear" size="6" maxlength="4" value="{{birthyear}}">
+					</div>
+				</div>
+				<div class="field">
+					<div class="label">
+						<label>Zip Code:</label>
+					</div>
+					<div class="input">
+						<input type="text" name="zipCode" value="{{zip}}" size="6" maxlength="5">
+					</div>
+				</div>
+			</div>
+			<div class="form-submit">
+				<button class="submit-button">Submit</button>
+			</div>
+		</form>
+	</div>
+	<div class="user-form user-tag hidden">	
+		<h1>Tag Events</h1><br>	
+		<form action="">
+			<div class="field">
+				<div class="label tool-label">
+					<label>Event Name:</label>
+				</div>
+				<div class="input tool-input">
+					<input type="search" name="name">
+				</div>
+			</div>
+			<div class="field">
+				<div class="label tool-label">
+					<label>Event Date:</label>
+				</div>
+				<div class="input tool-input">
+					<input type="date" >
+				</div>
+			</div>
+			{{!-- <div class="field">
+				<div class="label tool-label">
+					<label>Zip code:</label>
+				</div>
+				<div class="input tool-input">
+					<input type="text" maxlength="5">
+				</div>
+			</div> --}}
+			<div class="form-submit">
+				<button class="submit-button">Submit</button>
+			</div>
+		</form>
+			
+		
+		{{!-- <div class="tool search-event">
 			<h2 class="tool-tab">Search Events</h2>
 			<div>
 				<form action="">
@@ -110,75 +183,13 @@
 					</div>
 				</form>
 			</div>
-		</div>
-	</div> --}}
-	{{!-- <div class="user-edit">
-		<div class="tool">
-			<h2 class="tool-tab">Edit User Details</h2>
-			<div>
-				<form action="">
-					<div class="field">
-						<div class="label">
-							<label>Username:</label>
-						</div>
-						<div class="input">
-							<input type="text" name="uname" value="{{username}}">
-						</div>
-					</div>
-					<div class="field">
-						<div class="label">
-							<label>Password:</label>
-						</div>
-						<div class="input">
-							<input type="password" name="password" value="{{password}}">
-						</div>
-					</div>
-					<div class="field">
-						<div class="label">
-							<label>Email:</label>
-						</div>
-						<div class="input">
-							<input type="email" name="email" value="{{email}}">
-						</div>
-					</div>						
-					<div class="field">
-						<div class="label">
-							<label>Zip Code:</label>
-						</div>
-						<div class="input">
-							<input type="text" name="zip" value="{{zip}}" value=size="6" maxlength="5">
-						</div>
-					</div>
-					<div class="field">
-						<div class="label">
-							<label>Birth Year:</label>
-						</div>
-						<div class="input">
-							<input type="text" name="birthyear" value="{{birthyear}}" size="6" maxlength="4">
-						</div>
-					</div>
-					<div class="field">
-						<div class="label">
-							<label>Gender:</label>
-						</div>
-						<div class="input">
-							<select name="gender" name="gender" value="{{gender}}">
-								<option value="male">Male</option>
-								<option value="female">Female</option>
-							</select>
-						</div>
-					</div>
-					<div class="form-submit">
-						<button class="submit-button">Submit</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div> --}}
+		</div> --}}
+	</div>
 </div>
 <div class="secondary-content">
 	<div class="user-results-divider">
-		<h1 class="user-results-headline">Results</h1>
+		<h1 class="user-results-headline hidden">Event Matches</h1>
+		<h1 class="todays-top-events">Today's top events</h1>
 	</div>
 	<div class="media-event-bio-list">
 		

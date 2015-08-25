@@ -9,7 +9,7 @@ var App = require('../app')
 var EventsList = Backbone.View.extend({
 
 	el: $('main'),
-	markers = [],
+	// markers = [],
 
 	events: {
 	'submit .search-event form': 'submitSearchEvent'
@@ -17,31 +17,26 @@ var EventsList = Backbone.View.extend({
 
 	render: function() {
 		console.log('eventslist')
-		this.$el.html(eventsTemplate())
-		
-		this.gmap = new GMaps({
-		  div: '.map',
-		  lat: -12.043333,
-		  lng: -77.028333
-		});
+		var today = new Date();
+		var dd = today.getDate();
+		var mm = today.getMonth()+1; //January is 0!
+		var yyyy = today.getFullYear();
+		// var filterDate = $('.rail-date input[name="date"]').val()
+
+		if(dd<10) dd='0'+dd;
+
+		if(mm<10) mm='0'+mm;
+
+		today = yyyy+'-'+mm+'-'+dd;
+		console.log(today)
+		this.$el.html(eventsTemplate({
+			todaysDate: today
+		}))
 
 	},
 
 	submitSearchEvent: function(e){
 		e.preventDefault()
-
-
-
-		var marker = this.gmap.addMarker({
-		  lat: -12.043333,
-		  lng: -77.028333,
-		  title: 'Lima',
-		  click: function(e) {
-		  		lert('You clicked in this marker');
-			}
-		});
-
-		this.markers.push(marker)
 
 		
 

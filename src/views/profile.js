@@ -17,27 +17,13 @@ var Profile = Backbone.View.extend({
 	'submit .user-edit form': 'submitEditUser',
 	'submit .user-tag form': 'submitTagEvent',
 	'click .tag-it': 'clickToTagIt',
-	'click .untag-it': 'clickToUnTagIt'
+	'click .untag-it': 'clickToUnTagIt',
+	'click .whos-going': 'clickWhoIs',
+	'click .attendee-stats': 'clickOutStats'
 	},
 
 	render: function(userId) {
 		var _this = this;
-
-		
-		var user = this.user = new App.Models.User({
-			id: userId
-		});
-
-		user.fetch().done(function(){
-			_this.$el.html(profileTemplate({
-				username: user.get('uname'),
-				password: user.get('password'),
-				email: user.get('email'),
-				gender: user.get('gender'),
-				zip: user.get('zip'),
-				birthyear: user.get('birthyear')
-			}));
-		});
 
 		var today = new Date();
 		var dd = today.getDate();
@@ -50,9 +36,25 @@ var Profile = Backbone.View.extend({
 
 		today = mm+'/'+dd+'/'+yyyy;
 		console.log(today);
+		
+		var user = this.user = new App.Models.User({
+			id: userId
+		});
+
+		user.fetch().done(function(){
+			_this.$el.html(profileTemplate({
+				username: user.get('uname'),
+				password: user.get('password'),
+				email: user.get('email'),
+				gender: user.get('gender'),
+				zip: user.get('zip'),
+				birthyear: user.get('birthyear'),
+				today: today
+			}));
+		});
+
 
 		App.Collections.event.fetch().done(function(){
-			
 			tagCollection.fetch().done(function(){
 
 				var userId = _this.user.id;
@@ -83,7 +85,7 @@ var Profile = Backbone.View.extend({
 	},
 
 	clickSearch: function() {
-		App.router.navigate('events', true);
+		App.router.navigate('events/' + this.user.id, true);
 	},
 
 	clickTag: function() {
@@ -123,7 +125,7 @@ var Profile = Backbone.View.extend({
 		  var match = false;
 		  match = (new RegExp('.*' + searchTerm + '.*', 'i'))
 		  	.test(model.get('name'));
-		  console.log(model.get('name'))
+		  console.log(model)
           return match
         })
         .map(function(model) {
@@ -147,7 +149,8 @@ var Profile = Backbone.View.extend({
 			userId: userId,
 			eventId: eventId
 		});
-
+		var event = App.Collections.event.get(eventId)
+		event.set('isTagged', true)
 		tag.save().done(function(){
 			$(e.currentTarget).addClass('hidden');
 			$(e.currentTarget).siblings('.untag-it').removeClass('hidden')
@@ -168,6 +171,16 @@ var Profile = Backbone.View.extend({
 			$(e.currentTarget).addClass('hidden')
 	      	$(e.currentTarget).siblings('.tag-it').removeClass('hidden');
 	    });
+	},
+
+	clickWhoIs: function(e){
+		console.log('who')
+		$(e.currentTarget).siblings('.attendee-stats').removeClass('hidden')
+	},
+
+	clickOutStats: function(e){
+		console.log(e.currentTarget)
+		$(e.currentTarget).addClass('hidden')
 	}
  
 });

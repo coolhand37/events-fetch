@@ -26,7 +26,7 @@ App.Router = Backbone.Router.extend({
 		'': 'index',
 		'thankyou/:id(/)': 'thankYou',
 		'profile/:id(/)': 'profile',
-		'events(/)': 'eventsList',
+		'events/:id(/)': 'eventsList',
 		'*actions': 'defaultRoute'
 	},
 
@@ -42,8 +42,8 @@ App.Router = Backbone.Router.extend({
 		App.Views.profile.render(id)
 	},
 
-	eventsList: function() {
-		App.Views.eventsList.render()
+	eventsList: function(id) {
+		App.Views.eventsList.render(id)
 
 	} 
 

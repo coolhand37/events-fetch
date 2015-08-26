@@ -143,6 +143,15 @@
       "birthyear": "",
       "zip": "",
       "id": 16
+    },
+    {
+      "uname": "coolhand125",
+      "password": "lkjlkj",
+      "email": "coolhand@gmail.com",
+      "gender": "male",
+      "birthyear": 1981,
+      "zip": 85286,
+      "id": 17
     }
   ],
   "events": [
@@ -160,30 +169,56 @@
       "url": "http://www.tempelakeoktoberfest.com"
     },
     {
-      "name": "Scottsdale beerfest",
-      "address": "2311 N Miller Rd",
-      "city": "scottsdale",
-      "state": "az",
-      "zip": 85257,
-      "id": 2,
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident mollitia sed repellendus soluta debitis expedita.",
-      "img": "images/scottsdale.jpg",
-      "date": "09/05/2015",
-      "category": "day drinking",
-      "url": "http://www.scottsdalebeerfest.com"
-    },
-    {
       "name": "Beer games",
       "address": "8 S San Marcos Pl",
       "city": "chandler",
       "state": "az",
       "zip": 85225,
       "id": 3,
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident mollitia sed repellendus soluta debitis expedita.",
+      "bio": "Come show your dinking skills as you compete against fellow drinking professionals",
       "img": "images/beerfest.jpg",
       "date": "09/05/2015",
       "category": "festivals",
       "url": "http://www.bestdayever.com"
+    },
+    {
+      "name": "Dwight Yokem",
+      "address": "1065 N Dobson Rd",
+      "city": "mesa",
+      "state": "az",
+      "zip": 85201,
+      "id": 8,
+      "bio": "Don't be 1000 miles from nowhere this weekend. Instead join the Honky Tonk man himself!",
+      "img": "images/dwight.jpg",
+      "date": "09/05/2015",
+      "category": "music",
+      "url": "http://www.getyokemed.com"
+    },
+    {
+      "name": "Brews Cruise",
+      "address": "232 S Arizona Ave",
+      "city": "chandler",
+      "state": "az",
+      "zip": 85225,
+      "id": 10,
+      "bio": "Have some beers and cruise the town in our annual brews cruise.",
+      "img": "images/brewscruise.jpg",
+      "date": "09/05/2015",
+      "category": "day drinking",
+      "url": "http://www.brewscruise.com"
+    },
+    {
+      "name": "Scottsdale beerfest",
+      "address": "2311 N Miller Rd",
+      "city": "scottsdale",
+      "state": "az",
+      "zip": 85257,
+      "id": 9,
+      "bio": "Come bump elbows with all of the cities finest citizens in our annual beer festival",
+      "img": "images/scottsdale.jpg",
+      "date": "09/05/2015",
+      "category": "day drinking",
+      "url": "http://www.scottsdalebeerfest.com"
     },
     {
       "name": "Spice girl reunion",
@@ -192,7 +227,7 @@
       "state": "az",
       "zip": 85281,
       "id": 4,
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident mollitia sed repellendus soluta debitis expedita.",
+      "bio": "Yes, they must be pretty desperate to team up again for this great reunion show",
       "img": "images/spicegirls.jpg",
       "date": "09/05/2015",
       "category": "music",
@@ -205,7 +240,7 @@
       "state": "az",
       "zip": 85202,
       "id": 5,
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident mollitia sed repellendus soluta debitis expedita.",
+      "bio": "Come hang out and drink complimentary water and lemonade. It will be a blast.",
       "img": "images/noalcohol.jpg",
       "date": "09/05/2015",
       "category": "day drinking",
@@ -218,7 +253,7 @@
       "state": "az",
       "zip": 85008,
       "id": 6,
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident mollitia sed repellendus soluta debitis expedita.",
+      "bio": "Who, who, who, who, who, who, who, who, who, who, who, who, who, who, who?",
       "img": "images/who.jpg",
       "date": "09/05/2015",
       "category": "music",
@@ -231,24 +266,11 @@
       "state": "az",
       "zip": 85257,
       "id": 7,
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident mollitia sed repellendus soluta debitis expedita.",
+      "bio": "Eat and drink till your heart is content. This is one event you cannot miss.",
       "img": "images/culinary.jpg",
       "date": "09/05/2015",
       "category": "festivals",
       "url": "http://www.culinaryandwine.com"
-    },
-    {
-      "name": "Dwight Yokem",
-      "address": "1065 N Dobson Rd",
-      "city": "mesa",
-      "state": "az",
-      "zip": 85201,
-      "id": 8,
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident mollitia sed repellendus soluta debitis expedita.",
-      "img": "images/dwight.jpg",
-      "date": "09/05/2015",
-      "category": "music",
-      "url": "http://www.getyokemed.com"
     },
     {
       "name": "Final day of Bootcamp!",
@@ -256,10 +278,10 @@
       "city": "tempe",
       "state": "az",
       "zip": 85201,
-      "id": 9,
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident mollitia sed repellendus soluta debitis expedita.",
+      "id": 2,
+      "bio": "Schools out for the summer. Schools out forever!",
       "img": "images/schoolsout.jpg",
-      "date": "08/24/2015",
+      "date": "08/26/2015",
       "category": "festivals",
       "url": "http://www.yipeee.com"
     }
@@ -271,24 +293,24 @@
       "id": 2
     },
     {
-      "userId": 1,
-      "eventId": 2,
+      "userId": 5,
+      "eventId": 1,
       "id": 3
     },
     {
-      "userId": 13,
-      "eventId": 2,
-      "id": 4
-    },
-    {
-      "userId": 14,
-      "eventId": 2,
+      "userId": 5,
+      "eventId": 9,
       "id": 5
     },
     {
-      "userId": 16,
+      "userId": 5,
       "eventId": 2,
       "id": 6
+    },
+    {
+      "userId": 5,
+      "eventId": 3,
+      "id": 7
     }
   ]
 }

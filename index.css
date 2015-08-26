@@ -20,6 +20,10 @@ html {
 /*********************************************
 	Defaults
 **********************************************/
+body {
+    background-color: #4f4e4e;
+}
+
 h1, h2, h3 {
     font-weight: bold;
 }
@@ -674,20 +678,22 @@ i.fa-minus {
 }
 
 .media-event-bio {
-    background-color: rgb(232, 243, 249);
+    /*background-color: rgb(232, 243, 249);*/
+    background-color: white;
     overflow: hidden;
+    border: 1px solid #ccc;
     margin: 10px 0 10px 0;
+    position: relative;
 }
 
 .media-bio-pic {
-    background-color: yellow;
+    /*background-color: yellow;*/
     float: left;
     width: 200px;
     height: 150px;
 }
 
 .media-bio-content {
-    background-color: white;
     margin-left: 210px;
     text-align: left;
     margin-top: 0;
@@ -697,9 +703,15 @@ i.fa-minus {
     margin-top: 2px;
 }
 
-.tag-it, .untag-it {
+.event-link-out {
+    margin-right: 10px;
+}
+
+.tag-it, .untag-it, .whos-going {
+    display: inline-block;
     cursor: pointer;
     margin-bottom: 0;
+    margin-right: 20px;
 }
 
 .tag-it i.fa-plus {
@@ -712,6 +724,26 @@ i.fa-minus {
 
 .tag-icon {
     padding-left: 5px;
+}
+
+.attendee-stats {
+    background-color: white;
+    border: 1px solid orange;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.attendee-stats {
+    padding: 20px;
+}
+
+.stat {
+    display: inline-block;
+    font-size: 1.5em;
+    margin: 10px;
 }
 
 .secondary-why {

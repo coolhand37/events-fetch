@@ -4,6 +4,7 @@ var _ = require('lodash');
 var eventsTemplate = require('../templates/events.hbs');
 var eventMediaTemplate = require('../templates/event-media-object.hbs');
 var filterBarTemplate = require('../templates/category-filters.hbs');
+var tagCollection = require('../collections/tag');
 var GMaps = require('gmaps');
 
 var App = require('../app')
@@ -26,11 +27,11 @@ var EventsList = Backbone.View.extend({
 		'click .filter-item-add': 'clickFilterItemAdd',
 		'click .filter-item-remove': 'clickFilterItemRemove',
 		'click .date-filter-add': 'clickFilterDateAdd',
-		'click .date-filter-remove': 'clickFilterDateRemove' 
+		'click .date-filter-remove': 'clickFilterDateRemove',
 
 	},
 
-	render: function() {
+	render: function(userId) {
 		var today = new Date();
 		var dd = today.getDate();
 		var mm = today.getMonth()+1; //January is 0!
@@ -45,7 +46,14 @@ var EventsList = Backbone.View.extend({
 		console.log(today)
 		this.$el.html(eventsTemplate({
 			todaysDate: today
-		}))
+		}));
+
+		App.Collections.event.fetch().done(function(events){
+			console.log(events)
+			var result = eventMediaTemplate(events);
+			$('.media-event-bio-list').html(result);
+		})
+	       
 
 	},
 

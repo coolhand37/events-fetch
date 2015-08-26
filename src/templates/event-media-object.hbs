@@ -9,13 +9,16 @@
 		</div>
 		<div>
 			<p>{{bio}}</p>			
-			<a href="{{url}}">{{url}}</a>			
-			<p class="tag-it {{#if isTagged}}hidden{{/if}}">
-				<i class="fa fa-plus"></i><span class="tag-icon">Tag this event</span>
-			</p>
-			<p class="untag-it {{#if isTagged}}{{else}}hidden{{/if}}">
-				<i class="fa fa-minus"></i><span class="tag-icon">Untag this event</span>
-			</p>
+				<a class="event-link-out" href="{{url}}">{{url}}</a>			
+				<p class="tag-it {{#if isTagged}}hidden{{/if}}">
+					<i class="fa fa-plus"></i><span class="tag-icon">Tag this event</span>
+				</p>
+				<p class="untag-it {{#if isTagged}}{{else}}hidden{{/if}}">
+					<i class="fa fa-minus"></i><span class="tag-icon">Untag this event</span>
+				</p>
+				<p class="whos-going">
+					<i class="fa fa-pie-chart"></i></i><span class="tag-icon">Who's going</span>
+				</p>
 		</div>
 	</div>
 </div>

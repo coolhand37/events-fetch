@@ -116,6 +116,33 @@
       "birthyear": 1956,
       "zip": 58768,
       "id": 13
+    },
+    {
+      "uname": "jj",
+      "password": "",
+      "email": "",
+      "gender": "male",
+      "birthyear": "",
+      "zip": "",
+      "id": 14
+    },
+    {
+      "uname": "matt",
+      "password": "ljklj",
+      "email": "matt@gmail.com",
+      "gender": "male",
+      "birthyear": "",
+      "zip": "",
+      "id": 15
+    },
+    {
+      "uname": "timmy",
+      "password": "lkjkljlk",
+      "email": "timmy@gmail.com",
+      "gender": "male",
+      "birthyear": "",
+      "zip": "",
+      "id": 16
     }
   ],
   "events": [
@@ -126,10 +153,10 @@
       "state": "az",
       "zip": 85281,
       "id": 1,
-      "bio": "Get really really drunk this weekend in our attempt recreate the greatest event of all time: Oktoberfeest.",
-      "img": "no_image.jpg",
+      "bio": "Drink, drink and drink this weekend as we recreate the greatest event of all time: Oktoberfeest.",
+      "img": "images/oktoberfest.jpg",
       "date": "09/05/2015",
-      "category": "day drinking",
+      "category": "festivals",
       "url": "http://www.tempelakeoktoberfest.com"
     },
     {
@@ -140,7 +167,7 @@
       "zip": 85257,
       "id": 2,
       "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident mollitia sed repellendus soluta debitis expedita.",
-      "img": "no_image.jpg",
+      "img": "images/scottsdale.jpg",
       "date": "09/05/2015",
       "category": "day drinking",
       "url": "http://www.scottsdalebeerfest.com"
@@ -153,9 +180,9 @@
       "zip": 85225,
       "id": 3,
       "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident mollitia sed repellendus soluta debitis expedita.",
-      "img": "no_image.jpg",
+      "img": "images/beerfest.jpg",
       "date": "09/05/2015",
-      "category": "day drinking",
+      "category": "festivals",
       "url": "http://www.bestdayever.com"
     },
     {
@@ -166,7 +193,7 @@
       "zip": 85281,
       "id": 4,
       "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident mollitia sed repellendus soluta debitis expedita.",
-      "img": "no_image.jpg",
+      "img": "images/spicegirls.jpg",
       "date": "09/05/2015",
       "category": "music",
       "url": "http://www.dontshootyourself.com"
@@ -179,7 +206,7 @@
       "zip": 85202,
       "id": 5,
       "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident mollitia sed repellendus soluta debitis expedita.",
-      "img": "no_image.jpg",
+      "img": "images/noalcohol.jpg",
       "date": "09/05/2015",
       "category": "day drinking",
       "url": "http://www.nofunever.com"
@@ -192,7 +219,7 @@
       "zip": 85008,
       "id": 6,
       "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident mollitia sed repellendus soluta debitis expedita.",
-      "img": "no_image.jpg",
+      "img": "images/who.jpg",
       "date": "09/05/2015",
       "category": "music",
       "url": "http://www.whowhowhowho.com"
@@ -205,9 +232,9 @@
       "zip": 85257,
       "id": 7,
       "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident mollitia sed repellendus soluta debitis expedita.",
-      "img": "no_image.jpg",
+      "img": "images/culinary.jpg",
       "date": "09/05/2015",
-      "category": "day drinking",
+      "category": "festivals",
       "url": "http://www.culinaryandwine.com"
     },
     {
@@ -218,7 +245,7 @@
       "zip": 85201,
       "id": 8,
       "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident mollitia sed repellendus soluta debitis expedita.",
-      "img": "images/no_image.jpg",
+      "img": "images/dwight.jpg",
       "date": "09/05/2015",
       "category": "music",
       "url": "http://www.getyokemed.com"
@@ -231,9 +258,9 @@
       "zip": 85201,
       "id": 9,
       "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident mollitia sed repellendus soluta debitis expedita.",
-      "img": "no_image.jpg",
+      "img": "images/schoolsout.jpg",
       "date": "08/24/2015",
-      "category": "festival",
+      "category": "festivals",
       "url": "http://www.yipeee.com"
     }
   ],
@@ -252,6 +279,16 @@
       "userId": 13,
       "eventId": 2,
       "id": 4
+    },
+    {
+      "userId": 14,
+      "eventId": 2,
+      "id": 5
+    },
+    {
+      "userId": 16,
+      "eventId": 2,
+      "id": 6
     }
   ]
 }

@@ -1,4 +1,5 @@
 var Backbone = require('backbone');
+var _ = require('lodash');
 var App = require('./app');
 
 var userCollection = require('./collections/user')

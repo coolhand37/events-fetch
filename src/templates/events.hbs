@@ -8,90 +8,85 @@
 			<h2 class="events-rail-h2">Event Search</h2>
 			<h3 class="events-rail-h3">Date:</h3>
 			<div class="rail-date">
-				<input type="date" name="date" value="{{todaysDate}}">
+				<form action="">
+					<input type="date" name="date" value="{{todaysDate}}">
+					<div class="date-filter-add">
+						<i class="fa fa-plus"></i>
+						<i class="fa fa-minus hidden"></i>
+					</div>
+				</form>
 			</div>
 			<h3 class="events-rail-h3">Show me:</h3>
 			<div class="filter-box">
-				<div class="filter-type event-filter">
+				<div class="filter-type event-filter event-filter-colapse">
 					<h3>Event Types</h3>
 					<i class="fa fa-plus hidden"></i>
 					<i class="fa fa-minus"></i>
 				</div>
-				<ul class="filter-type-list events-list hidden">
+				<ul class="filter-type-list events-list">
 					<div>			
-						<li class="filter-item">Art<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
-						<li class="filter-item">Art<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
-						<li class="filter-item">Art<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item filter-item-add">art<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item filter-item-add">benefits<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item filter-item-add">bars<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
 					</div>
-					<div class="load-more-events">More <i class="fa fa-caret-down"></i></div>
-					<div class="more-events hidden">
-						<li class="filter-item">Art<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
-						<li class="filter-item">Art<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
-						<li class="filter-item">Art<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+					<div class="load-more-event-categories">More <i class="fa fa-caret-down"></i></div>
+					<div class="more-event-categories hidden">
+						<li class="filter-item filter-item-add">conference<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item filter-item-add">cultural<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item filter-item-add">day drinking<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item filter-item-add">education<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item filter-item-add">family<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item filter-item-add">festivals<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item filter-item-add">food and drink<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item filter-item-add">happy hour<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item filter-item-add">health and fitness<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item filter-item-add">music<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item filter-item-add">nighlife<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item filter-item-add">outdoors<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item filter-item-add">performing arts<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item filter-item-add">promotional events<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item filter-item-add">sports-participatory<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item filter-item-add">sports-spectator<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item filter-item-add">religious<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item filter-item-add">theater<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
 					</div>
 				</ul>
-				<div class="filter-type location-filter">
-					<h3>Event Types</h3>
-					<i class="fa fa-plus"></i>
-					<i class="fa fa-minus hidden"></i>
+				<div class="filter-type location-filter location-filter-colapse">
+					<h3>Locations</h3>
+					<i class="fa fa-plus hidden"></i>
+					<i class="fa fa-minus"></i>
 				</div>
 				<ul class="filter-type-list location-list">
 					<div>			
-						<li class="filter-item">Art<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
-						<li class="filter-item">Art<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
-						<li class="filter-item">Art<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item filter-item-add">Flagstaff<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item filter-item-add">Mohave County<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item filter-item-add">Phoenix<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
 					</div>
 					<div class="load-more-locations">More <i class="fa fa-caret-down"></i></div>
-					<div class="more-locations">
-						<li class="filter-item">Art<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
-						<li class="filter-item">Art<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
-						<li class="filter-item">Art<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+					<div class="more-locations hidden">
+						<li class="filter-item filter-item-add">Prescott<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item filter-item-add">Sedona<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item filter-item-add">Showlow<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item filter-item-add">Sierra Vista<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item filter-item-add">Tuscon<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
+						<li class="filter-item filter-item-add">Yuma<i class="fa fa-plus"></i><i class="fa fa-minus hidden"></i></li>
 					</div>
 				</ul>
 			</div>
 		</div>
 	</aside>
 	<div class="events-results">
-		<h1>Events for {{date}}</h1>
+		<div>
+			<h1>Events Calender</h1>
+			<span>Searching for:</span>
+			<div>
+				<ul class="filter-category-bar">
+					
+				</ul>
+			</div>
+		</div>
+		<div class="media-event-bio-list event-results-media">
+			
+		</div>
 	</div>
-	{{!-- <div class="tool search-bar">
-		<form action="">
-			<label>Categories:</label>
-			<select name="categories">
-			  <option value="">All</option>
-			  <option value="art">Art</option>
-			  <option value="benifits">Benefits</option>
-			  <option value="bars">Bars</option>
-			  <option value="conferences">Conferences</option>
-			  <option value="cultural">Cultural</option>
-			  <option value="day drinking">Day Drinking</option>
-			  <option value="education">Education</option>
-			  <option value="family">Family</option>
-			  <option value="festivals">Festivals</option>
-			  <option value="food and drink">Food and Drink</option>
-			  <option value="happy hour">Happy Hour</option>
-			  <option value="health and fitness">Health and Fitness</option>
-			  <option value="music">Music</option>
-			  <option value="nightlife">Nightlife</option>
-			  <option value="outdoors">Outdoors</option>
-			  <option value="performing arts">Performing Arts</option>
-			  <option value="promotional events">Promotional Events</option>
-			  <option value="sports participatory">Sports - Participatory</option>
-			  <option value="sports spectator">Sports - Spectator</option>
-			  <option value="religious">Religious</option>
-			  <option value="theater">Theater</option>
-			</select>
-
-			<label>Dates:</label>
-			<input type="date" >
-
-			<label>Zip code:</label>
-			<input type="text" maxlength="5">
-
-			<button class="submit-button search-events">Submit</button>
-		</form>
-	</div> --}}
-	{{!-- <div class="map">
-		
-	</div> --}}
 </div>

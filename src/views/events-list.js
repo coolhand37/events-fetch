@@ -5,7 +5,6 @@ var eventsTemplate = require('../templates/events.hbs');
 var eventMediaTemplate = require('../templates/event-media-object.hbs');
 var filterBarTemplate = require('../templates/category-filters.hbs');
 var tagCollection = require('../collections/tag');
-var GMaps = require('gmaps');
 
 var App = require('../app')
 
@@ -27,8 +26,7 @@ var EventsList = Backbone.View.extend({
 		'click .filter-item-add': 'clickFilterItemAdd',
 		'click .filter-item-remove': 'clickFilterItemRemove',
 		'click .date-filter-add': 'clickFilterDateAdd',
-		'click .date-filter-remove': 'clickFilterDateRemove',
-
+		'click .date-filter-remove': 'clickFilterDateRemove'
 	},
 
 	render: function(userId) {
@@ -36,25 +34,21 @@ var EventsList = Backbone.View.extend({
 		var dd = today.getDate();
 		var mm = today.getMonth()+1; //January is 0!
 		var yyyy = today.getFullYear();
-		// var filterDate = $('.rail-date input[name="date"]').val()
 
 		if(dd<10) dd='0'+dd;
 
 		if(mm<10) mm='0'+mm;
 
 		today = yyyy+'-'+mm+'-'+dd;
-		console.log(today)
+		
 		this.$el.html(eventsTemplate({
 			todaysDate: today
 		}));
 
 		App.Collections.event.fetch().done(function(events){
-			console.log(events)
 			var result = eventMediaTemplate(events);
 			$('.media-event-bio-list').html(result);
-		})
-	       
-
+		});
 	},
 
 	submitSearchEvent: function(e){
@@ -125,11 +119,8 @@ var EventsList = Backbone.View.extend({
 			category: this.selectedFilterCategories
 			});
 		var _this = this;
-
 		
 		$('ul.filter-category-bar').html(result);
-
-		console.log(this.selectedFilterCategories)
 
 		App.Collections.event.fetch().done(function(events){
 			var eventsByCategory = events.filter(function (model) {
@@ -147,12 +138,12 @@ var EventsList = Backbone.View.extend({
 		$(e.currentTarget).removeClass('filter-item-remove');
 		$(e.currentTarget).addClass('filter-item-add');
 
-		var category = $(e.currentTarget).text()
+		var category = $(e.currentTarget).text();
 		var _this = this;
 
 		this.selectedFilterCategories = _.reject(this.selectedFilterCategories, function (filter) {
 		  return filter === category
-		})
+		});
 
 		var result = filterBarTemplate({
 			category: this.selectedFilterCategories
@@ -163,12 +154,11 @@ var EventsList = Backbone.View.extend({
 		var events = App.Collections.event;
 
 		var eventsByCategory = events.filter(function (model) {
-			console.log(model.get('category'))
 	          return _this.selectedFilterCategories.indexOf(model.get('category')) > -1
 	        })
 			.map(function(model){
 		        	return model.toJSON();
-		    })
+		    });
 
 		var result = eventMediaTemplate(eventsByCategory);
 				$('.media-event-bio-list').html(result); 
@@ -176,7 +166,6 @@ var EventsList = Backbone.View.extend({
 	},
 
 	clickFilterDateAdd: function(e){
-		console.log($(e.currentTarget))
 		$(e.currentTarget).children('i.fa-minus').removeClass('hidden');
 		$(e.currentTarget).children('i.fa-plus').addClass('hidden');
 		$(e.currentTarget).removeClass('date-filter-add');
@@ -189,7 +178,6 @@ var EventsList = Backbone.View.extend({
 		$(e.currentTarget).addClass('date-filter-add');
 		$(e.currentTarget).removeClass('date-filter-remove');
 	}
-
 
 });
 

@@ -1,24 +1,61 @@
 {{#each this}}
 <div class="media-event-bio" data-event-id={{id}}>
 	<div class="media-bio-pic">
-		<img src="{{img}}" alt="event picture">
+		<img src="images/{{img}}" alt="event picture">
 	</div>
 	<div class="media-bio-content">
 		<div>
 			<h3>{{name}}</h3>
 		</div>
 		<div>
-			<p>{{bio}}</p>			
-				<a class="event-link-out" href="{{url}}">{{url}}</a>			
-				<p class="tag-it {{#if isTagged}}hidden{{/if}}">
-					<i class="fa fa-plus"></i><span class="tag-icon">Tag this event</span>
-				</p>
-				<p class="untag-it {{#if isTagged}}{{else}}hidden{{/if}}">
-					<i class="fa fa-minus"></i><span class="tag-icon">Untag this event</span>
-				</p>
-				<p class="whos-going">
-					<i class="fa fa-pie-chart"></i></i><span class="tag-icon">Who's going</span>
-				</p>
+			<p class="brief-bio-content">{{bio}}</p>			
+			<a class="event-link-out" href="{{url}}">{{url}}</a>			
+			<p class="tag-it {{#if isTagged}}hidden{{/if}}">
+				<i class="fa fa-plus"></i><span class="tag-icon">Tag this event</span>
+			</p>
+			<p class="untag-it {{#if isTagged}}{{else}}hidden{{/if}}">
+				<i class="fa fa-minus"></i><span class="tag-icon">Untag this event</span>
+			</p>
+			<p class="whos-going">
+				<i class="fa fa-pie-chart"></i><span class="tag-icon">Who's going</span>
+			</p>
+			<div class="attendee-stats hidden">
+				<div class="stat">
+					<div>
+						<i class="fa fa-users"></i><span class="tag-icon">Attendees:</span><hr>
+						<div class="stat-result">
+							{{attendees}}
+						</div>
+					</div>
+				</div>
+				<div class="stat">
+					<div>
+						<i class="fa fa-male"></i><span class="tag-icon">Male:</span><hr>
+						<div class="stat-result">
+							{{male}}%
+						</div>
+					</div>
+				</div>
+				<div class="stat">
+					<div>
+						<i class="fa fa-female"></i><span class="tag-icon">Female:</span><hr>
+						<div class="stat-result">
+							{{female}}%
+						</div>
+					</div>
+				</div>
+				<div class="stat">
+					<div>
+						<i class="fa fa-calendar"></i><span class="tag-icon">Avg Age:</span><hr>
+						<div class="stat-result">
+							{{age}}
+						</div>
+					</div>
+					<div class="stat-close">
+						<i class="fa fa-times-circle"></i>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

@@ -152,9 +152,52 @@
       "birthyear": 1981,
       "zip": 85286,
       "id": 17
+    },
+    {
+      "uname": "ryan95",
+      "password": 1995,
+      "email": "bryanpedina@gmail.com",
+      "gender": "male",
+      "birthyear": 1995,
+      "zip": 86609,
+      "id": 18
     }
   ],
   "events": [
+    {
+      "name": "Final day of Bootcamp!",
+      "address": "1065 N Dobson Rd",
+      "city": "tempe",
+      "state": "az",
+      "zip": 85201,
+      "id": 2,
+      "bio": "Schools out for the summer. Schools out forever! Now lets get to coding.",
+      "img": "schoolsout.jpg",
+      "date": "08/26/2015",
+      "category": "education",
+      "url": "http://www.yipeee.com",
+      "attendees": 1,
+      "male": 100,
+      "female": 0,
+      "age": 34
+    },
+    {
+      "name": "Thirsty Thursday End of Bootcamp Happy Hour",
+      "address": "1065 N Dobson Rd",
+      "city": "tempe",
+      "state": "az",
+      "zip": 85201,
+      "id": 17,
+      "bio": "Join us at Casey Moores oyster house to celebrate a great 12 weeks.",
+      "img": "cheers.jpg",
+      "date": "08/26/2015",
+      "category": "happy hour",
+      "url": "http://www.celebrateagood12weeks.com",
+      "attendees": 1,
+      "male": 100,
+      "female": 0,
+      "age": 34
+    },
     {
       "name": "Tempe Town Lake Oktoberfest",
       "address": "80 W Rio Salado Pkwy",
@@ -163,10 +206,14 @@
       "zip": 85281,
       "id": 1,
       "bio": "Drink, drink and drink this weekend as we recreate the greatest event of all time: Oktoberfeest.",
-      "img": "images/oktoberfest.jpg",
+      "img": "oktoberfest.jpg",
       "date": "09/05/2015",
       "category": "festivals",
-      "url": "http://www.tempelakeoktoberfest.com"
+      "url": "http://www.tempelakeoktoberfest.com",
+      "attendees": "1,267",
+      "male": 52,
+      "female": 48,
+      "age": 31
     },
     {
       "name": "Beer games",
@@ -176,10 +223,14 @@
       "zip": 85225,
       "id": 3,
       "bio": "Come show your dinking skills as you compete against fellow drinking professionals",
-      "img": "images/beerfest.jpg",
+      "img": "beerfest.jpg",
       "date": "09/05/2015",
       "category": "festivals",
-      "url": "http://www.bestdayever.com"
+      "url": "http://www.bestdayever.com",
+      "attendees": 856,
+      "male": 70,
+      "female": 30,
+      "age": 24
     },
     {
       "name": "Dwight Yokem",
@@ -189,23 +240,14 @@
       "zip": 85201,
       "id": 8,
       "bio": "Don't be 1000 miles from nowhere this weekend. Instead join the Honky Tonk man himself!",
-      "img": "images/dwight.jpg",
+      "img": "dwight.jpg",
       "date": "09/05/2015",
       "category": "music",
-      "url": "http://www.getyokemed.com"
-    },
-    {
-      "name": "Brews Cruise",
-      "address": "232 S Arizona Ave",
-      "city": "chandler",
-      "state": "az",
-      "zip": 85225,
-      "id": 10,
-      "bio": "Have some beers and cruise the town in our annual brews cruise.",
-      "img": "images/brewscruise.jpg",
-      "date": "09/05/2015",
-      "category": "day drinking",
-      "url": "http://www.brewscruise.com"
+      "url": "http://www.getyokemed.com",
+      "attendees": 772,
+      "male": 60,
+      "female": 40,
+      "age": 46
     },
     {
       "name": "Scottsdale beerfest",
@@ -215,10 +257,31 @@
       "zip": 85257,
       "id": 9,
       "bio": "Come bump elbows with all of the cities finest citizens in our annual beer festival",
-      "img": "images/scottsdale.jpg",
+      "img": "scottsdale.jpg",
       "date": "09/05/2015",
       "category": "day drinking",
-      "url": "http://www.scottsdalebeerfest.com"
+      "url": "http://www.scottsdalebeerfest.com",
+      "attendees": 553,
+      "male": 58,
+      "female": 42,
+      "age": 29
+    },
+    {
+      "name": "Brews Cruise",
+      "address": "232 S Arizona Ave",
+      "city": "chandler",
+      "state": "az",
+      "zip": 85225,
+      "id": 10,
+      "bio": "Have some beers and cruise the town in our annual brews cruise.",
+      "img": "brewscruise.jpg",
+      "date": "09/05/2015",
+      "category": "day drinking",
+      "url": "http://www.brewscruise.com",
+      "attendees": 350,
+      "male": 36,
+      "female": 64,
+      "age": 32
     },
     {
       "name": "Spice girl reunion",
@@ -228,10 +291,14 @@
       "zip": 85281,
       "id": 4,
       "bio": "Yes, they must be pretty desperate to team up again for this great reunion show",
-      "img": "images/spicegirls.jpg",
+      "img": "spicegirls.jpg",
       "date": "09/05/2015",
       "category": "music",
-      "url": "http://www.dontshootyourself.com"
+      "url": "http://www.dontshootyourself.com",
+      "attendees": 50,
+      "male": 20,
+      "female": 80,
+      "age": 29
     },
     {
       "name": "non-alcoholic beverage guild unite",
@@ -241,10 +308,14 @@
       "zip": 85202,
       "id": 5,
       "bio": "Come hang out and drink complimentary water and lemonade. It will be a blast.",
-      "img": "images/noalcohol.jpg",
+      "img": "noalcohol.jpg",
       "date": "09/05/2015",
       "category": "day drinking",
-      "url": "http://www.nofunever.com"
+      "url": "http://www.nofunever.com",
+      "attendees": 50,
+      "male": 20,
+      "female": 80,
+      "age": 54
     },
     {
       "name": "The Who",
@@ -254,10 +325,14 @@
       "zip": 85008,
       "id": 6,
       "bio": "Who, who, who, who, who, who, who, who, who, who, who, who, who, who, who?",
-      "img": "images/who.jpg",
+      "img": "who.jpg",
       "date": "09/05/2015",
       "category": "music",
-      "url": "http://www.whowhowhowho.com"
+      "url": "http://www.whowhowhowho.com",
+      "attendees": 24,
+      "male": 50,
+      "female": 50,
+      "age": 29
     },
     {
       "name": "The ultimate culinary and wine festival",
@@ -267,23 +342,116 @@
       "zip": 85257,
       "id": 7,
       "bio": "Eat and drink till your heart is content. This is one event you cannot miss.",
-      "img": "images/culinary.jpg",
+      "img": "culinary.jpg",
       "date": "09/05/2015",
       "category": "festivals",
-      "url": "http://www.culinaryandwine.com"
+      "url": "http://www.culinaryandwine.com",
+      "attendees": 33,
+      "male": 45,
+      "female": 55,
+      "age": 39
     },
     {
-      "name": "Final day of Bootcamp!",
-      "address": "1065 N Dobson Rd",
+      "name": "Don't be this guy. How to enjoy work and life.",
+      "address": "733 E university ave",
       "city": "tempe",
       "state": "az",
-      "zip": 85201,
-      "id": 2,
-      "bio": "Schools out for the summer. Schools out forever!",
-      "img": "images/schoolsout.jpg",
-      "date": "08/26/2015",
-      "category": "festivals",
-      "url": "http://www.yipeee.com"
+      "zip": 85257,
+      "id": 12,
+      "bio": "Everyone gets bogged down at work but don't forget the silver lining. This conference gives you the tools to make the best out of any career.",
+      "img": "ryan2.jpg",
+      "date": "09/05/2015",
+      "category": "conference",
+      "url": "http://www.dontbethisguy.com",
+      "attendees": 50,
+      "male": 20,
+      "female": 80,
+      "age": 29
+    },
+    {
+      "name": "Mesa art gallery grand opening",
+      "address": "733 E university ave",
+      "city": "tempe",
+      "state": "az",
+      "zip": 85257,
+      "id": 13,
+      "bio": "Come see some of the states finest art along with top pieces from around the country.",
+      "img": "art.jpg",
+      "date": "09/05/2015",
+      "category": "art",
+      "url": "http://www.mesaartgallery.com",
+      "attendees": 50,
+      "male": 20,
+      "female": 80,
+      "age": 29
+    },
+    {
+      "name": "The art of the haircut",
+      "address": "733 E university ave",
+      "city": "tempe",
+      "state": "az",
+      "zip": 85257,
+      "id": 11,
+      "bio": "It's all about the hair. Learn how to channel those long locks into a life of longevity and happiness.",
+      "img": "ryan.jpg",
+      "date": "09/05/2015",
+      "category": "art",
+      "url": "http://www.hairandart.com",
+      "attendees": 50,
+      "male": 50,
+      "female": 50,
+      "age": 21
+    },
+    {
+      "name": "Tilted Kilt all you can eat wings",
+      "address": "733 E university ave",
+      "city": "chandler",
+      "state": "az",
+      "zip": 85257,
+      "id": 64,
+      "bio": "Eat till you can't eat no more and then eat some more or you will lose.",
+      "img": "tiltedkilt.jpg",
+      "date": "09/05/2015",
+      "category": "bars",
+      "url": "http://www.tiltedkilt.com",
+      "attendees": 65,
+      "male": 81,
+      "female": 19,
+      "age": 36
+    },
+    {
+      "name": "SanTan Brewery dinner and a movie",
+      "address": "733 E university ave",
+      "city": "chandler",
+      "state": "az",
+      "zip": 85257,
+      "id": 15,
+      "bio": "Catch the timeless classic Coolhand Luke about a man who refuses to conform to life on a prison chain gang.",
+      "img": "movie.jpg",
+      "date": "09/05/2015",
+      "category": "bars",
+      "url": "http://www.santanbrewing.com",
+      "attendees": 52,
+      "male": 57,
+      "female": 43,
+      "age": 31
+    },
+    {
+      "name": "Bourbon Jacks live music",
+      "address": "733 E university ave",
+      "city": "chandler",
+      "state": "az",
+      "zip": 85257,
+      "id": 16,
+      "bio": "The states top country band headlines tonight playing all your favorite country songs and covers.",
+      "img": "country.jpg",
+      "date": "09/05/2015",
+      "category": "bars",
+      "url": "http://www.bourbonjacks.com",
+      "attendees": 44,
+      "male": 35,
+      "female": 65,
+      "age": 28
     }
   ],
   "tags": [
@@ -294,23 +462,13 @@
     },
     {
       "userId": 5,
-      "eventId": 1,
+      "eventId": 2,
       "id": 3
     },
     {
       "userId": 5,
-      "eventId": 9,
-      "id": 5
-    },
-    {
-      "userId": 5,
-      "eventId": 2,
-      "id": 6
-    },
-    {
-      "userId": 5,
-      "eventId": 3,
-      "id": 7
+      "eventId": 17,
+      "id": 4
     }
   ]
 }

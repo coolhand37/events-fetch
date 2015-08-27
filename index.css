@@ -77,7 +77,6 @@ select {
 }
 
 .panel > div {
-    /*background-color: purple;*/
     text-align: center;
     position: relative;
 }
@@ -89,7 +88,6 @@ select {
 }
 
 header.main-header {
-    /*background-color: yellow;*/
     overflow: hidden;
     position: absolute;
     z-index: 2;
@@ -99,20 +97,12 @@ header.main-header {
     left: 0;
 }
 
-/*header.main-header > div {
-    height: 55px;
-    position: relative;
-
-}*/
-
 .main-header nav {
-    /*background-color: black;*/
     position: absolute;
     right: 50px;
 }
 
 .main-header nav a {
-    /*background-color: red;*/
     color: white;
     padding: 20px;
     text-decoration: none;
@@ -150,17 +140,12 @@ div.main-hero.search-results {
     background-position: center;
 }
 
-div.main-content {
-    /*background-color: orange;*/
-}
-
 main div.user-account-main {
     padding: 0;
     position: relative;
 }
 
 div.secondary-content {
-    /*background-color: green;*/
     padding-top: 0;
 }
 
@@ -197,29 +182,25 @@ footer.main-footer {
 /********Hero Main Content*********/
 
 .main-hero-content {
-    /*background-color: green;*/
     color: white;
     position: absolute;
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 600px; /*why do i have to add width*/
+    width: 600px;
 }
 
 .thankyou-page .main-hero-content {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
 }
 
 .search-results .main-hero-content {
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-
 }
-
 
 .main-hero.user-home h1 {
     font-size: 2.5em;
@@ -230,7 +211,6 @@ footer.main-footer {
 }
 
 .user-form {
-    /*background-color: green;*/
     color: white;
     border: 3px solid #F79639;
     display: inline-block;
@@ -246,7 +226,6 @@ footer.main-footer {
 .user-form form {
     border-top: 2px solid #F79639;
     padding-top: 10px;
-
 }
 
 .user-form h1 {
@@ -264,11 +243,9 @@ footer.main-footer {
 
 .field {
     text-align: left;
-    /*background-color: green;*/
     border: 1px solid transparent;
     margin-top: 7px;
 }
-
 
 .cf::after {
     content: "";
@@ -277,7 +254,6 @@ footer.main-footer {
 }
 
 .field .label {
-    /*background-color: blue;*/
     float: left;
     width: 85px;
     display: block;
@@ -285,7 +261,6 @@ footer.main-footer {
 }
 
 .field .input {
-    /*background-color: yellow;*/
     margin-left: 90px;
 }
 
@@ -298,7 +273,6 @@ footer.main-footer {
     border-radius: 20px;
     width: 100px;
     color: white;
-    /*border: 2px solid white;*/
     background-color: #F79639;
 }
 
@@ -311,7 +285,6 @@ footer.main-footer {
     padding: 10px;
     width: 200px;
     border-radius: 30px;
-    /*border: 2px solid white;*/
     background-color: #F79639;
 
 }
@@ -320,11 +293,9 @@ footer.main-footer {
 
 .signup-steps {
     padding-top: 20px;
-    /*background-color: yellow;*/
 }
 
 .signup-steps .step {
-    /*background-color: yellow;*/
     padding: 0 15px;
     width: 30%;
     display: inline-block;
@@ -332,13 +303,15 @@ footer.main-footer {
 }
 
 .step-icon-border {
-    /*font-size: 2.5em;*/
     color: #323232;
     display: inline-block;
-    /*background-color: orange;*/
     border: 3px solid #F79639;
     padding: 5px 15px;
     border-radius: 50%;
+}
+
+.profile-options {
+    padding-bottom: 10px;
 }
 
 .profile-options > div {
@@ -349,10 +322,6 @@ footer.main-footer {
     padding: 20px;
     cursor: pointer;
 }
-
-/*.profile-options > div p {
-    padding: 0 10px;
-}*/
 
 .profile-options h1 {
     font-size: 1.7em;
@@ -370,26 +339,6 @@ footer.main-footer {
 .hover-options:hover .line {
     width: 80px;
 }
-
-/*.user-tools .tool {
-    vertical-align: top;
-    width: 350px;
-    color: white;
-    margin-right: 10px;
-    display: inline-block; 
-    transform: translateY(-30px);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    margin-bottom: 0;
-}*/
-
-/*.tool > div {
-    color: #4f4e4e;
-    padding: 10px;
-    box-shadow: 0px 0px 10px -5px black;
-    border-top: none;
-    min-height: 175px;
-}*/
 
 .field .tool-label {
     width: 100px;
@@ -416,8 +365,7 @@ footer.main-footer {
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 315px;
-    
+    width: 315px;    
 }
 
 .search-events-results {
@@ -443,13 +391,11 @@ footer.main-footer {
     text-align: center;
     padding: 20px;
     margin: 0 auto;
-    width: 220px;
-    
+    width: 220px;   
 }
 
 .events-rail-h3 {
-    margin: 15px 0 0 10px;
-    
+    margin: 15px 0 0 10px;    
 }
 
 .rail-date, .filter-box {
@@ -489,15 +435,11 @@ footer.main-footer {
     border-color: orange;
 }
 
-.filter-box {
-
-}
-
 .filter-type {
     cursor: pointer;
     border: 1px solid #ccc;
     text-transform: uppercase;
-    
+    margin-top: 5px;   
 }
 
 .filter-type h3 {
@@ -507,7 +449,6 @@ footer.main-footer {
     width: 200px;
     display: inline-block;
     font-size: .8em;
-    /*width: 150px;*/
 }
 
 .filter-type i {
@@ -533,7 +474,6 @@ footer.main-footer {
     cursor: pointer;
     text-transform: capitalize;
 }
-
 
 .filter-item-remove {
     background-color: #ccc;
@@ -614,19 +554,9 @@ i.fa-minus {
     padding: 5px 10px;
     display: inline-block;
     text-transform: capitalize;
-    margin: 0 5px;
+    margin: 0 5px 5px 0;
     position: relative;
 }
-
-/*.category-bar-filter-list::before {
-    content: '+';
-    position: absolute;
-    left: -25px;
-    top: 0;
-    font-size: 1.5em;
-    font-weight: bold;
-
-}*/
 
 .category-bar-filter-list i {
     background-color: red;
@@ -637,25 +567,11 @@ i.fa-minus {
     margin-left: 10px;
 }
 
-/*.search-bar {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 2;
-}
-
-.main-content .map {
-    padding: 0;
-    background-color: green;
-    min-height: 400px;
-}*/
-
 
 /*******Secondary Content********/
 
 .secondary-content-divider {
     background-color: #4f4e4e;
-    /*background-image: url("images/tweed.png");*/
 }
 
 .secondary-headline {
@@ -678,7 +594,6 @@ i.fa-minus {
 }
 
 .media-event-bio {
-    /*background-color: rgb(232, 243, 249);*/
     background-color: white;
     overflow: hidden;
     border: 1px solid #ccc;
@@ -687,7 +602,6 @@ i.fa-minus {
 }
 
 .media-bio-pic {
-    /*background-color: yellow;*/
     float: left;
     width: 200px;
     height: 150px;
@@ -697,10 +611,15 @@ i.fa-minus {
     margin-left: 210px;
     text-align: left;
     margin-top: 0;
+    min-height: 150px;
 }
 
 .media-bio-content h3 {
     margin-top: 2px;
+}
+
+.brief-bio-content {
+    margin-bottom: 0px;
 }
 
 .event-link-out {
@@ -728,22 +647,41 @@ i.fa-minus {
 
 .attendee-stats {
     background-color: white;
-    border: 1px solid orange;
     border-radius: 5px;
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 500px;
     transform: translate(-50%, -50%);
 }
 
-.attendee-stats {
-    padding: 20px;
+.stat {
+    border: 1px solid orange;
+    float: left;
+    margin-right: 5px;
+    position: relative;
 }
 
-.stat {
-    display: inline-block;
-    font-size: 1.5em;
-    margin: 10px;
+.stat > div {
+    padding: 10px;
+}
+
+.stat i {
+    font-size: 1.2em;
+    padding: 5px;
+}
+
+.stat-result {
+    padding: 5px;
+    text-align: center;
+    font-size: 2em;
+}
+
+.stat-close {
+    color: red;
+    position: absolute;
+    right: -8%;
+    top: -11%;
 }
 
 .secondary-why {
@@ -751,14 +689,12 @@ i.fa-minus {
 }
 
 footer.main-footer > div {
-    /*background-color: white;*/
     padding: 10px 20px;
     display: inline-block;
     width: 24%;
     vertical-align: top;
     text-align: left;
     color: white;
-    /*height: 100px;*/
 }
 
 footer.main-footer ul {

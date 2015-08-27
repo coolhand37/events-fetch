@@ -19,7 +19,7 @@ var Profile = Backbone.View.extend({
 	'click .tag-it': 'clickToTagIt',
 	'click .untag-it': 'clickToUnTagIt',
 	'click .whos-going': 'clickWhoIs',
-	'click .attendee-stats': 'clickOutStats'
+	'click .stat-close': 'clickOutStats'
 	},
 
 	render: function(userId) {
@@ -35,7 +35,6 @@ var Profile = Backbone.View.extend({
 		if(mm<10) mm='0'+mm;
 
 		today = mm+'/'+dd+'/'+yyyy;
-		console.log(today);
 		
 		var user = this.user = new App.Models.User({
 			id: userId
@@ -53,7 +52,6 @@ var Profile = Backbone.View.extend({
 			}));
 		});
 
-
 		App.Collections.event.fetch().done(function(){
 			tagCollection.fetch().done(function(){
 
@@ -64,20 +62,18 @@ var Profile = Backbone.View.extend({
 						eventId: model.id,
 						userId: userId
 					});
+
 					model.set('isTagged', !!tag)
 		          	return model.get('date') === today;
 		        })
 		        .map(function(model){
 		        	return model.toJSON();
-		        })
-		        console.log(todaysEvents)
+		        });
+		        
 				var result = eventMediaTemplate(todaysEvents);
 				$('.media-event-bio-list').html(result);
-			})
-	        
+			});
 	      });
-
-
 	},
 
 	clickEdit: function() {
@@ -107,7 +103,6 @@ var Profile = Backbone.View.extend({
 
 		this.user.set(formData);
 
-		console.log(this.user);
      	this.user.save().done(function () {
         	$('.user-edit').addClass('hidden');
         	$('.user-tools').removeClass('hidden');
@@ -118,45 +113,43 @@ var Profile = Backbone.View.extend({
 	submitTagEvent: function(e){
 		e.preventDefault();
 
-		var events = App.Collections.event
+		var events = App.Collections.event;
 
 		var searchTerm = $('.user-tag form input[name="name"]').val();
 		var searchName = events.filter(function (model) {
 		  var match = false;
 		  match = (new RegExp('.*' + searchTerm + '.*', 'i'))
 		  	.test(model.get('name'));
-		  console.log(model)
           return match
         })
         .map(function(model) {
         	return model.toJSON()
-        })
+        });
 
 		var result = eventMediaTemplate(searchName);
 		$('.media-event-bio-list').html(result);
 		$('.user-tag').addClass('hidden');
         $('.todays-top-events').addClass('hidden');
-        $('.user-results-headline').removeClass('hidden')
+        $('.user-results-headline').removeClass('hidden');
 	  
 	},
 
 	clickToTagIt: function(e){
 		var userId = this.user.id;
 		var eventId = $(e.target).parents('div.media-event-bio').data('event-id');
-		console.log(eventId)
-		console.log(userId)
+
 		var tag = new App.Models.Tag({
 			userId: userId,
 			eventId: eventId
 		});
-		var event = App.Collections.event.get(eventId)
-		event.set('isTagged', true)
+		var event = App.Collections.event.get(eventId);
+		event.set('isTagged', true);
 		tag.save().done(function(){
 			$(e.currentTarget).addClass('hidden');
 			$(e.currentTarget).siblings('.untag-it').removeClass('hidden')
 		});
 		
-		tagCollection.add(tag)
+		tagCollection.add(tag);
 	},
 
 	clickToUnTagIt: function(e){
@@ -174,13 +167,11 @@ var Profile = Backbone.View.extend({
 	},
 
 	clickWhoIs: function(e){
-		console.log('who')
 		$(e.currentTarget).siblings('.attendee-stats').removeClass('hidden')
 	},
 
 	clickOutStats: function(e){
-		console.log(e.currentTarget)
-		$(e.currentTarget).addClass('hidden')
+		$(e.currentTarget).parents('.attendee-stats').addClass('hidden')
 	}
  
 });

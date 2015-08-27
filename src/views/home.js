@@ -13,11 +13,10 @@ var Home = Backbone.View.extend({
 	},
 
 	render: function() {
-		this.$el.html(homeTemplate())
+		this.$el.html(homeTemplate());
 	},
 
 	clickSignup: function() {
-		console.log('clicked signup')
 		$('.main-hero-content').addClass('hidden');
 		$('.user-form').removeClass('hidden');
     },

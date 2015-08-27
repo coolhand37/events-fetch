@@ -18,7 +18,6 @@ var ThankYou = Backbone.View.extend ({
 	},
 
 	clickGetStarted: function() {
-		console.log(this.id)
 		App.router.navigate('profile/' + this.id, true);
 	}
 
